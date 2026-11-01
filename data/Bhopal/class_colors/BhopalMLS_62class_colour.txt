@@ -1,0 +1,77 @@
+====================================================================================================
+BHOPAL MLS DATASET - 62 CLASS COLOR MAPPING
+Generated from Figure 01 class distribution (with gradient shading)
+====================================================================================================
+
+Colors are based on 12 parent classes with gradient shading for sub-classes
+Gradient: Alpha decreases for sub-classes (sorted by instance count)
+====================================================================================================
+
+Class  Code   Class Name                                    Hex Code   RGB Values           Alpha 
+----------------------------------------------------------------------------------------------------
+0      0100   Ground                                        #E3A477    RGB(227, 164, 119)  0.600
+1      0101   Flat Ground                                   #D67834    RGB(214, 120,  52)  0.900
+2      0102   Gently Sloping Ground                         #EABB99    RGB(234, 187, 153)  0.450
+3      0103   Steeply Sloping Ground                        #DD8E56    RGB(221, 142,  86)  0.750
+4      0200   Vegetation                                    #83E183    RGB(131, 225, 131)  0.600
+5      0201   Low Vegetation                                #46D246    RGB( 70, 210,  70)  0.900
+6      0202   Medium Vegetation                             #A2E8A2    RGB(162, 232, 162)  0.450
+7      0203   High Vegetation                               #65D965    RGB(101, 217, 101)  0.750
+8      0300   Building                                      #A43838    RGB(164,  56,  56)  0.780
+9      0301   Residential                                   #B25656    RGB(178,  86,  86)  0.660
+10     0302   Commercial                                    #961919    RGB(150,  25,  25)  0.900
+11     0303   Industrial                                    #CE9393    RGB(206, 147, 147)  0.420
+12     0304   Special                                       #C07575    RGB(192, 117, 117)  0.540
+13     0400   Road                                          #D7D7D7    RGB(215, 215, 215)  0.900
+14     0500   Wire                                          #FFDB19    RGB(255, 219,  25)  0.900
+15     0600   Pole and Tower                                #9365B3    RGB(147, 101, 179)  0.600
+16     0601   Electric Pole                                 #5D198E    RGB( 93,  25, 142)  0.900
+17     0602   Mobile Tower                                  #AE8CC6    RGB(174, 140, 198)  0.450
+18     0603   Street Light                                  #783FA1    RGB(120,  63, 161)  0.750
+19     0700   Wire-Structure Connector                      #FF7259    RGB(255, 114,  89)  0.900
+20     0800   Vehicle                                       #61B1FF    RGB( 97, 177, 255)  0.700
+21     0801   Car                                           #3D9FFF    RGB( 61, 159, 255)  0.860
+22     0802   Mobike (Two-Wheeler)                          #349BFF    RGB( 52, 155, 255)  0.900
+23     0803   Cycle                                         #6AB5FF    RGB(106, 181, 255)  0.660
+24     0804   Hand-Cart                                     #4FA8FF    RGB( 79, 168, 255)  0.780
+25     0805   Tuktuk (3 Wheeler)                            #58ACFF    RGB( 88, 172, 255)  0.740
+26     0806   Truck                                         #7CBEFF    RGB(124, 190, 255)  0.580
+27     0807   Rickshaw                                      #8EC7FF    RGB(142, 199, 255)  0.500
+28     0808   E-Rickshaw                                    #A9D4FF    RGB(169, 212, 255)  0.380
+29     0809   Dynamic Car                                   #97CBFF    RGB(151, 203, 255)  0.460
+30     0810   Dynamic Tuktuk (3 Wheeler)                    #73BAFF    RGB(115, 186, 255)  0.620
+31     0811   Dynamic Truck                                 #B2D9FF    RGB(178, 217, 255)  0.340
+32     0812   Rider on Vehicle                              #85C3FF    RGB(133, 195, 255)  0.540
+33     0813   Mobike Rider (2 Wheeler)                      #46A3FF    RGB( 70, 163, 255)  0.820
+34     0814   Cycle Rider                                   #A0D0FF    RGB(160, 208, 255)  0.420
+35     0900   Board                                         #B39AE5    RGB(179, 154, 229)  0.700
+36     0901   Sign Board                                    #C9B7ED    RGB(201, 183, 237)  0.500
+37     0902   Advt Board                                    #9D7EDE    RGB(157, 126, 222)  0.900
+38     1000   Fencing                                       #434343    RGB( 67,  67,  67)  0.900
+39     1001   Masonry Wall                                  #757575    RGB(117, 117, 117)  0.660
+40     1002   Wired Boundary Fencing                        #8E8E8E    RGB(142, 142, 142)  0.540
+41     1003   Gate of Boundary Wall                         #5C5C5C    RGB( 92,  92,  92)  0.780
+42     1004   Road Fencing                                  #A7A7A7    RGB(167, 167, 167)  0.420
+43     1100   Human and Animal                              #FF78BB    RGB(255, 120, 187)  0.900
+44     1101   Male                                          #FF84C1    RGB(255, 132, 193)  0.814
+45     1102   Female                                        #FF91C8    RGB(255, 145, 200)  0.729
+46     1103   Child                                         #FF9ECE    RGB(255, 158, 206)  0.643
+47     1104   Animal                                        #FFC5E2    RGB(255, 197, 226)  0.386
+48     1105   Dog                                           #FFB8DB    RGB(255, 184, 219)  0.471
+49     1106   Cow                                           #FFABD5    RGB(255, 171, 213)  0.557
+50     1200   Road Side Object                              #62C9C3    RGB( 98, 201, 195)  0.700
+51     1201   Barricade                                     #57C5BF    RGB( 87, 197, 191)  0.750
+52     1202   Shop Shade                                    #4CC1BB    RGB( 76, 193, 187)  0.800
+53     1203   Road Side Furniture                           #36B9B2    RGB( 54, 185, 178)  0.900
+54     1204   Statue                                        #B0E4E1    RGB(176, 228, 225)  0.350
+55     1205   Handpump                                      #6ECCC7    RGB(110, 204, 199)  0.650
+56     1206   Road Side Public Structure                    #9ADCD8    RGB(154, 220, 216)  0.450
+57     1207   Mannequin                                     #41BDB6    RGB( 65, 189, 182)  0.850
+58     1208   Dustbin                                       #84D4D0    RGB(132, 212, 208)  0.550
+59     1209   Bus Stand                                     #A5E0DD    RGB(165, 224, 221)  0.400
+60     1210   Overhead Structure                            #8FD8D4    RGB(143, 216, 212)  0.500
+61     1211   Road Median                                   #79D0CB    RGB(121, 208, 203)  0.600
+
+====================================================================================================
+
+====================================================================================================

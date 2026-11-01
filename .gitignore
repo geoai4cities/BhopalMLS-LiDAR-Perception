@@ -1,0 +1,37 @@
+# the environment is built locally
+bhopalmls_venv/
+# weights, data and run outputs stay outside git
+*_pretrained/*.pth
+*/Bhopal/outputs/
+*/*/outputs/
+*/cross_data_testing/outputs/
+data/Bhopal/*.h5
+!data/Bhopal/bhopal_scene_v9_abl*.h5
+data/Bhopal/source/
+# survey-path trajectories are not distributed (leakage analysis inputs; its outputs are shipped)
+data/Bhopal/Bhopal_Path_vector_data/
+*.gpkg
+data/Kerala/*.h5
+data/Toronto_3D/*.h5
+data/Toronto_3D/*.ply
+data/Paris-Lille-3D/*.h5
+data/Paris-Lille-3D/training_*/
+data/Paris-Lille-3D/test_*/
+data/SemanticKITTI/dataset/
+data/SemanticKITTI/official/
+*.pth
+*.pt
+*.npy
+*.npz
+!Pointcept/pointcept/datasets/preprocessing/scannet/meta_data/*.npz
+!LitePT/litept/datasets/preprocessing/scannet/meta_data/*.npz
+*.las
+*.laz
+*.ply
+!Pointcept/pointcept/models/kpconvx/utils/dispositions/*.ply
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+*.so
+.DS_Store

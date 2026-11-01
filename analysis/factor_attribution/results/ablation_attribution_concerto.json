@@ -1,0 +1,326 @@
+{
+  "targets": {
+    "KM": {
+      "n_c": 12,
+      "full_forward": 49.22666666666667,
+      "reverse": 32.7025,
+      "gap": 16.524166666666666,
+      "arms": {
+        "B1_size": {
+          "miou": 50.504166666666656,
+          "removed_pp": -1.2774999999999892,
+          "closed_pct": -7.731100912804413
+        },
+        "B2_variety": {
+          "miou": 39.74416666666667,
+          "removed_pp": 9.482499999999995,
+          "closed_pct": 57.385647284280566
+        },
+        "B3_regular": {
+          "miou": 50.442499999999995,
+          "removed_pp": -1.2158333333333289,
+          "closed_pct": -7.3579101316253706
+        },
+        "B4_subtype": {
+          "miou": 40.31583333333334,
+          "removed_pp": 8.91083333333333,
+          "closed_pct": 53.926067880377204
+        }
+      },
+      "per_class": {
+        "B1_size": {
+          "Ground": 12.790000000000001,
+          "Vegetation": 76.18,
+          "Building": 68.28,
+          "Road": 70.83,
+          "Wire": 73.7,
+          "Pole and Tower": 60.9,
+          "Wire-Structure Connector": 38.95,
+          "Vehicle": 82.80999999999999,
+          "Board": 6.069999999999999,
+          "Fencing": 36.980000000000004,
+          "Human and Animal": 75.19,
+          "Road Side Object": 3.37
+        },
+        "B2_variety": {
+          "Ground": 7.630000000000001,
+          "Vegetation": 79.16,
+          "Building": 75.85,
+          "Road": 66.58,
+          "Wire": 63.1,
+          "Pole and Tower": 36.91,
+          "Wire-Structure Connector": 7.7,
+          "Vehicle": 17.28,
+          "Board": 7.7700000000000005,
+          "Fencing": 57.74,
+          "Human and Animal": 56.74,
+          "Road Side Object": 0.47000000000000003
+        },
+        "B3_regular": {
+          "Ground": 12.520000000000001,
+          "Vegetation": 75.82,
+          "Building": 63.68000000000001,
+          "Road": 71.44,
+          "Wire": 77.38000000000001,
+          "Pole and Tower": 54.16,
+          "Wire-Structure Connector": 45.24,
+          "Vehicle": 76.55,
+          "Board": 9.28,
+          "Fencing": 40.5,
+          "Human and Animal": 73.55000000000001,
+          "Road Side Object": 5.19
+        },
+        "B4_subtype": {
+          "Ground": 10.41,
+          "Vegetation": 72.04,
+          "Building": 66.06,
+          "Road": 67.97,
+          "Wire": 61.01,
+          "Pole and Tower": 35.47,
+          "Wire-Structure Connector": 14.430000000000001,
+          "Vehicle": 57.85,
+          "Board": 8.959999999999999,
+          "Fencing": 42.61,
+          "Human and Animal": 46.04,
+          "Road Side Object": 0.9400000000000001
+        }
+      }
+    },
+    "TR": {
+      "n_c": 7,
+      "full_forward": 75.2,
+      "reverse": 39.10571428571428,
+      "gap": 36.094285714285725,
+      "arms": {
+        "B1_size": {
+          "miou": 72.34428571428572,
+          "removed_pp": 2.855714285714285,
+          "closed_pct": 7.911818253779779
+        },
+        "B2_variety": {
+          "miou": 60.10285714285714,
+          "removed_pp": 15.097142857142863,
+          "closed_pct": 41.82696113353914
+        },
+        "B3_regular": {
+          "miou": 72.63285714285715,
+          "removed_pp": 2.567142857142855,
+          "closed_pct": 7.112324863452853
+        },
+        "B4_subtype": {
+          "miou": 67.83285714285714,
+          "removed_pp": 7.367142857142866,
+          "closed_pct": 20.410828781762074
+        }
+      },
+      "per_class": {
+        "B1_size": {
+          "Vegetation": 91.78,
+          "Building": 92.2,
+          "Road": 90.38000000000001,
+          "Wire": 77.53,
+          "Pole and Tower": 57.809999999999995,
+          "Vehicle": 80.04,
+          "Fencing": 16.669999999999998
+        },
+        "B2_variety": {
+          "Vegetation": 93.33,
+          "Building": 87.62,
+          "Road": 97.61999999999999,
+          "Wire": 70.1,
+          "Pole and Tower": 59.309999999999995,
+          "Vehicle": 7.4399999999999995,
+          "Fencing": 5.3
+        },
+        "B3_regular": {
+          "Vegetation": 93.33,
+          "Building": 88.31,
+          "Road": 87.7,
+          "Wire": 80.15,
+          "Pole and Tower": 55.230000000000004,
+          "Vehicle": 76.6,
+          "Fencing": 27.11
+        },
+        "B4_subtype": {
+          "Vegetation": 90.22,
+          "Building": 82.58,
+          "Road": 92.49000000000001,
+          "Wire": 72.75,
+          "Pole and Tower": 61.27,
+          "Vehicle": 69.38,
+          "Fencing": 6.140000000000001
+        }
+      }
+    },
+    "PL": {
+      "n_c": 11,
+      "full_forward": 48.83545454545455,
+      "reverse": 31.073636363636364,
+      "gap": 17.76181818181819,
+      "arms": {
+        "B1_size": {
+          "miou": 49.75454545454545,
+          "removed_pp": -0.9190909090908974,
+          "closed_pct": -5.174531681850684
+        },
+        "B2_variety": {
+          "miou": 32.71,
+          "removed_pp": 16.125454545454552,
+          "closed_pct": 90.78718394922714
+        },
+        "B3_regular": {
+          "miou": 49.48363636363636,
+          "removed_pp": -0.6481818181818042,
+          "closed_pct": -3.649298802333833
+        },
+        "B4_subtype": {
+          "miou": 42.13,
+          "removed_pp": 6.70545454545455,
+          "closed_pct": 37.75207288361144
+        }
+      },
+      "per_class": {
+        "B1_size": {
+          "Ground": 13.44,
+          "Vegetation": 64.94,
+          "Building": 97.26,
+          "Road": 74.87,
+          "Wire": 45.73,
+          "Pole and Tower": 21.78,
+          "Vehicle": 96.71,
+          "Board": 17.39,
+          "Fencing": 48.620000000000005,
+          "Human and Animal": 21.990000000000002,
+          "Road Side Object": 44.57
+        },
+        "B2_variety": {
+          "Ground": 10.61,
+          "Vegetation": 60.47,
+          "Building": 95.91,
+          "Road": 74.11,
+          "Wire": 23.7,
+          "Pole and Tower": 21.58,
+          "Vehicle": 11.0,
+          "Board": 24.990000000000002,
+          "Fencing": 20.630000000000003,
+          "Human and Animal": 6.69,
+          "Road Side Object": 10.12
+        },
+        "B3_regular": {
+          "Ground": 11.4,
+          "Vegetation": 67.92,
+          "Building": 97.03,
+          "Road": 74.81,
+          "Wire": 48.15,
+          "Pole and Tower": 19.29,
+          "Vehicle": 94.58,
+          "Board": 27.08,
+          "Fencing": 31.46,
+          "Human and Animal": 19.31,
+          "Road Side Object": 53.290000000000006
+        },
+        "B4_subtype": {
+          "Ground": 13.29,
+          "Vegetation": 58.47,
+          "Building": 94.26,
+          "Road": 74.36,
+          "Wire": 30.130000000000003,
+          "Pole and Tower": 14.27,
+          "Vehicle": 93.45,
+          "Board": 22.48,
+          "Fencing": 29.17,
+          "Human and Animal": 5.19,
+          "Road Side Object": 28.360000000000003
+        }
+      }
+    },
+    "SK": {
+      "n_c": 9,
+      "full_forward": 32.07222222222222,
+      "reverse": 12.291111111111112,
+      "gap": 19.78111111111111,
+      "arms": {
+        "B1_size": {
+          "miou": 30.446666666666665,
+          "removed_pp": 1.6255555555555574,
+          "closed_pct": 8.217716115261483
+        },
+        "B2_variety": {
+          "miou": 16.821111111111108,
+          "removed_pp": 15.251111111111115,
+          "closed_pct": 77.0993652755154
+        },
+        "B3_regular": {
+          "miou": 33.07222222222222,
+          "removed_pp": -1.0,
+          "closed_pct": -5.055327753749369
+        },
+        "B4_subtype": {
+          "miou": 25.27666666666667,
+          "removed_pp": 6.795555555555552,
+          "closed_pct": 34.35376060214569
+        }
+      },
+      "per_class": {
+        "B1_size": {
+          "Ground": 49.669999999999995,
+          "Vegetation": 32.39,
+          "Building": 57.16,
+          "Road": 22.86,
+          "Pole and Tower": 18.18,
+          "Vehicle": 63.1,
+          "Board": 0.29,
+          "Fencing": 15.129999999999999,
+          "Human and Animal": 15.24
+        },
+        "B2_variety": {
+          "Ground": 24.610000000000003,
+          "Vegetation": 23.98,
+          "Building": 32.71,
+          "Road": 30.55,
+          "Pole and Tower": 8.66,
+          "Vehicle": 8.03,
+          "Board": 2.04,
+          "Fencing": 13.13,
+          "Human and Animal": 7.68
+        },
+        "B3_regular": {
+          "Ground": 43.34,
+          "Vegetation": 34.449999999999996,
+          "Building": 54.1,
+          "Road": 33.239999999999995,
+          "Pole and Tower": 29.330000000000002,
+          "Vehicle": 67.84,
+          "Board": 8.72,
+          "Fencing": 11.03,
+          "Human and Animal": 15.6
+        },
+        "B4_subtype": {
+          "Ground": 25.040000000000003,
+          "Vegetation": 42.59,
+          "Building": 48.88,
+          "Road": 29.93,
+          "Pole and Tower": 9.98,
+          "Vehicle": 36.42,
+          "Board": 2.4299999999999997,
+          "Fencing": 22.89,
+          "Human and Animal": 9.33
+        }
+      }
+    }
+  },
+  "class_names": [
+    "Ground",
+    "Vegetation",
+    "Building",
+    "Road",
+    "Wire",
+    "Pole and Tower",
+    "Wire-Structure Connector",
+    "Vehicle",
+    "Board",
+    "Fencing",
+    "Human and Animal",
+    "Road Side Object"
+  ]
+}

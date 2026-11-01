@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this benchmark code or the BhopalMLS dataset, please cite the paper."
+title: "BhopalMLS-LiDAR-Perception: benchmark code of the BhopalMLS dataset paper"
+type: software
+authors:
+  - family-names: Chauhan
+    given-names: Pyare Lal
+    affiliation: "GeoAI4Cities Lab, Department of Data Science and Engineering, IISER Bhopal"
+  - family-names: Kumar
+    given-names: Vaibhav
+    affiliation: "GeoAI4Cities Lab, Department of Data Science and Engineering, IISER Bhopal"
+  - family-names: Lohani
+    given-names: Bharat
+    affiliation: "Department of Civil Engineering, IIT Kanpur"
+license: MIT
+url: "https://geoai4cities.github.io/bhopalmls"
+repository-code: "https://github.com/geoai4cities/BhopalMLS-LiDAR-Perception"
+preferred-citation:
+  type: conference-paper
+  title: "BhopalMLS: A LiDAR Dataset for Semantic Scene Understanding in Heterogeneous Urban Environments"
+  authors:
+    - family-names: Chauhan
+      given-names: Pyare Lal
+    - family-names: Kumar
+      given-names: Vaibhav
+    - family-names: Lohani
+      given-names: Bharat
+  collection-title: "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)"
+  year: 2027

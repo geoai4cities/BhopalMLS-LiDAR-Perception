@@ -1,0 +1,64 @@
+{
+  "h5": "data/Bhopal/bhopal_scene_v9_normals_rgb.h5",
+  "criterion": "scene AABB vs union of train AABBs",
+  "disjoint": {
+    "scenes": 180,
+    "points": 75733316,
+    "paths": {
+      "7": 162,
+      "8": 18
+    },
+    "ignored_points": 0,
+    "parent_class_points": {
+      "Ground": 1952315,
+      "Vegetation": 6201356,
+      "Building": 41613317,
+      "Road": 11423938,
+      "Wire": 2688937,
+      "Pole and Tower": 915921,
+      "Wire-Structure Connector": 420451,
+      "Vehicle": 6004168,
+      "Board": 247824,
+      "Fencing": 395043,
+      "Human and Animal": 522474,
+      "Road Side Object": 3347572
+    },
+    "parent_classes_present": 12,
+    "fine_classes_present": 44
+  },
+  "overlapping": {
+    "scenes": 306,
+    "points": 126049221,
+    "paths": {
+      "7": 120,
+      "8": 186
+    },
+    "ignored_points": 0,
+    "parent_class_points": {
+      "Ground": 1767576,
+      "Vegetation": 1796834,
+      "Building": 86443599,
+      "Road": 16264629,
+      "Wire": 4829260,
+      "Pole and Tower": 1059529,
+      "Wire-Structure Connector": 265905,
+      "Vehicle": 5440083,
+      "Board": 1040916,
+      "Fencing": 299466,
+      "Human and Animal": 1254950,
+      "Road Side Object": 5586474
+    },
+    "parent_classes_present": 12,
+    "fine_classes_present": 47
+  },
+  "no_geometry_scenes": [
+    "S2_0001_bhopal7",
+    "S3_0005_a_bhopal7",
+    "S3_0005_b_bhopal7"
+  ],
+  "overlap_frac_distribution": {
+    "mean": 0.5181650205761317,
+    "pct_scenes_over_50pct_overlap": 54.32098765432099,
+    "pct_scenes_over_10pct_overlap": 62.139917695473244
+  }
+}

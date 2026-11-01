@@ -1,0 +1,215 @@
+{
+  "h5": "data/Bhopal/bhopal_scene_v9_normals_rgb.h5",
+  "seed": 42,
+  "budget_frac": 0.25,
+  "train_scenes": 1353,
+  "train_points": 540421158,
+  "budget_labeled_points": 135105289,
+  "dominant_fine_per_parent": {
+    "Ground": 1,
+    "Vegetation": 7,
+    "Building": 10,
+    "Road": 13,
+    "Wire": 14,
+    "Pole and Tower": 16,
+    "Wire-Structure Connector": 19,
+    "Vehicle": 22,
+    "Board": 37,
+    "Fencing": 39,
+    "Human and Animal": 43,
+    "Road Side Object": 53
+  },
+  "b2_class_groups": [
+    [
+      1
+    ],
+    [
+      7
+    ],
+    [
+      10
+    ],
+    [
+      13
+    ],
+    [
+      14
+    ],
+    [
+      16
+    ],
+    [
+      19
+    ],
+    [
+      22
+    ],
+    [
+      37
+    ],
+    [
+      39
+    ],
+    [
+      43
+    ],
+    [
+      53
+    ]
+  ],
+  "B1_size": {
+    "scenes": 360,
+    "total_points": 136082445,
+    "labeled_points": 136082445,
+    "paths": {
+      "1": 111,
+      "2": 69,
+      "3": 90,
+      "4": 90
+    },
+    "parent_class_points_full": {
+      "Ground": 4005159,
+      "Vegetation": 6290247,
+      "Building": 85028517,
+      "Road": 20038580,
+      "Wire": 4472498,
+      "Pole and Tower": 1513706,
+      "Wire-Structure Connector": 907717,
+      "Vehicle": 8277529,
+      "Board": 1029288,
+      "Fencing": 436414,
+      "Human and Animal": 1172754,
+      "Road Side Object": 2910036
+    },
+    "mean_road_width_m": 3.314316037904455,
+    "mean_curvature_deg": 25.456033026432184,
+    "h5_out": "data/Bhopal/bhopal_scene_v9_ablB1_size.h5"
+  },
+  "B2_variety": {
+    "scenes": 431,
+    "total_points": 169295533,
+    "labeled_points": 135167967,
+    "paths": {
+      "1": 140,
+      "2": 79,
+      "3": 101,
+      "4": 111
+    },
+    "parent_class_points_full": {
+      "Ground": 4335414,
+      "Vegetation": 6179436,
+      "Building": 106997742,
+      "Road": 24741870,
+      "Wire": 6047908,
+      "Pole and Tower": 1809367,
+      "Wire-Structure Connector": 1338209,
+      "Vehicle": 9922486,
+      "Board": 1376238,
+      "Fencing": 273721,
+      "Human and Animal": 1823156,
+      "Road Side Object": 4449986
+    },
+    "mean_road_width_m": 3.389680345193196,
+    "mean_curvature_deg": 26.06938544721454,
+    "h5_out": "data/Bhopal/bhopal_scene_v9_ablB2_variety.h5"
+  },
+  "B3_regular": {
+    "scenes": 295,
+    "total_points": 135482402,
+    "labeled_points": 135482402,
+    "paths": {
+      "1": 117,
+      "2": 40,
+      "3": 71,
+      "4": 67
+    },
+    "parent_class_points_full": {
+      "Ground": 5157828,
+      "Vegetation": 6431208,
+      "Building": 73580809,
+      "Road": 25792648,
+      "Wire": 6005322,
+      "Pole and Tower": 1760584,
+      "Wire-Structure Connector": 1544813,
+      "Vehicle": 10521472,
+      "Board": 1103087,
+      "Fencing": 460143,
+      "Human and Animal": 744556,
+      "Road Side Object": 2379932
+    },
+    "mean_road_width_m": 4.449827421772722,
+    "mean_curvature_deg": 1.6064767558132704,
+    "h5_out": "data/Bhopal/bhopal_scene_v9_ablB3_regular.h5"
+  },
+  "full_train_reference": {
+    "mean_road_width_m": 3.3426220863695635,
+    "mean_curvature_deg": 23.437609161762143
+  },
+  "b4_class_groups": [
+    [
+      1
+    ],
+    [
+      7
+    ],
+    [
+      10
+    ],
+    [
+      13
+    ],
+    [
+      14
+    ],
+    [
+      16
+    ],
+    [
+      19
+    ],
+    [
+      21
+    ],
+    [
+      37
+    ],
+    [
+      39
+    ],
+    [
+      43
+    ],
+    [
+      53
+    ]
+  ],
+  "b4_vehicle_fine": 21,
+  "B4_subtype": {
+    "scenes": 447,
+    "total_points": 174781590,
+    "labeled_points": 135183140,
+    "paths": {
+      "1": 144,
+      "2": 84,
+      "3": 106,
+      "4": 113
+    },
+    "parent_class_points_full": {
+      "Ground": 4462579,
+      "Vegetation": 6258763,
+      "Building": 110066873,
+      "Road": 25464869,
+      "Wire": 6218434,
+      "Pole and Tower": 1910853,
+      "Wire-Structure Connector": 1460445,
+      "Vehicle": 10608337,
+      "Board": 1441079,
+      "Fencing": 279497,
+      "Human and Animal": 1914245,
+      "Road Side Object": 4695616
+    },
+    "mean_road_width_m": 3.3867961073938497,
+    "mean_curvature_deg": 25.66486752755924,
+    "h5_out": "data/Bhopal/bhopal_scene_v9_ablB4_subtype.h5"
+  }
+}

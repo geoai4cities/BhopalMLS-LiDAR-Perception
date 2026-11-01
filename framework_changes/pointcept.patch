@@ -1,0 +1,262 @@
+diff --git a/pointcept/datasets/semantic_kitti.py b/pointcept/datasets/semantic_kitti.py
+index aefaa98..7541426 100644
+--- a/pointcept/datasets/semantic_kitti.py
++++ b/pointcept/datasets/semantic_kitti.py
+@@ -20,9 +20,12 @@ os.environ["OMP_NUM_THREADS"] = "1"
+ 
+ @DATASETS.register_module()
+ class SemanticKITTIDataset(DefaultDataset):
+-    def __init__(self, ignore_index=-1, **kwargs):
++    def __init__(self, ignore_index=-1, learning_map=None, **kwargs):
+         self.ignore_index = ignore_index
+-        self.learning_map = self.get_learning_map(ignore_index)
++        if learning_map is not None:
++            self.learning_map = learning_map
++        else:
++            self.learning_map = self.get_learning_map(ignore_index)
+         self.learning_map_inv = self.get_learning_map_inv(ignore_index)
+         super().__init__(ignore_index=ignore_index, **kwargs)
+ 
+@@ -195,11 +198,15 @@ class SemanticKITTIImagePointDataset(DefaultImagePointDataset):
+         sweeps=3,
+         sweep_gap=5,
+         ignore_index=-1,
++        learning_map=None,
+         **kwargs,
+     ):
+         self.if_img = if_img
+         self.ignore_index = ignore_index
+-        self.learning_map = self.get_learning_map(ignore_index)
++        if learning_map is not None:
++            self.learning_map = learning_map
++        else:
++            self.learning_map = self.get_learning_map(ignore_index)
+         self.learning_map_inv = self.get_learning_map_inv(ignore_index)
+         if if_sweep:
+             self.timestamp = tuple(range(0, sweeps * sweep_gap, sweep_gap))
+diff --git a/pointcept/datasets/transform.py b/pointcept/datasets/transform.py
+index cf4f4e1..89428f4 100644
+--- a/pointcept/datasets/transform.py
++++ b/pointcept/datasets/transform.py
+@@ -145,6 +145,24 @@ class NormalizeColor(object):
+         return data_dict
+ 
+ 
++@TRANSFORMS.register_module()
++class ZeroColor(object):
++    """Zero out color values (for testing without RGB)."""
++    def __call__(self, data_dict):
++        if "color" in data_dict.keys():
++            data_dict["color"] = np.zeros_like(data_dict["color"])
++        return data_dict
++
++
++@TRANSFORMS.register_module()
++class ZeroNormal(object):
++    """Zero out normal values (for testing without normals)."""
++    def __call__(self, data_dict):
++        if "normal" in data_dict.keys():
++            data_dict["normal"] = np.zeros_like(data_dict["normal"])
++        return data_dict
++
++
+ @TRANSFORMS.register_module()
+ class NormalizeCoord(object):
+     def __call__(self, data_dict):
+@@ -1264,7 +1282,7 @@ class InstanceParser(object):
+         coord = data_dict["coord"]
+         segment = data_dict["segment"]
+         instance = data_dict["instance"]
+-        mask = ~np.in1d(segment, self.segment_ignore_index)
++        mask = ~np.isin(segment, self.segment_ignore_index)
+         # mapping ignored instance to ignore index
+         instance[~mask] = self.instance_ignore_index
+         # reorder left instance
+diff --git a/pointcept/datasets/utils.py b/pointcept/datasets/utils.py
+index 89e4247..715c520 100644
+--- a/pointcept/datasets/utils.py
++++ b/pointcept/datasets/utils.py
+@@ -12,6 +12,9 @@ import torch
+ from torch.utils.data.dataloader import default_collate
+ import torch.nn.functional as F
+ 
++from torch_scatter import scatter_min
++from pointcept.models.utils import offset2batch
++
+ 
+ def collate_fn(batch):
+     """
+@@ -90,6 +93,18 @@ def point_collate_fn(batch, mix_prob=0):
+                 [batch[offset_asset][1:-1:2], batch[offset_asset][-1].unsqueeze(0)],
+                 dim=0,
+             )
++
++        # Recompute grid_coord after mixing, because each scene's grid_coord was
++        # independently shifted before mixing and is no longer consistent with
++        # the merged coord. Only done when grid_size is available (e.g. LitePT
++        # configs); other configs are unaffected.
++        if "grid_coord" in batch and "grid_size" in batch:
++            batch_idx = offset2batch(batch["offset"])
++            scaled_coord = batch["coord"] / batch["grid_size"][0]
++            grid_coord = torch.floor(scaled_coord).to(torch.int64)
++            min_coord, _ = scatter_min(grid_coord, batch_idx, dim=0)
++            batch["grid_coord"] = grid_coord - min_coord[batch_idx]
++
+         if "img_num" in batch.keys():
+             n = batch["img_num"].shape[0]
+             num_pairs = n // 2
+diff --git a/pointcept/engines/hooks/evaluator.py b/pointcept/engines/hooks/evaluator.py
+index 2c5474e..50fae49 100644
+--- a/pointcept/engines/hooks/evaluator.py
++++ b/pointcept/engines/hooks/evaluator.py
+@@ -269,7 +269,7 @@ class InsSegEvaluator(HookBase):
+     def associate_instances(self, pred, segment, instance):
+         segment = segment.cpu().numpy()
+         instance = instance.cpu().numpy()
+-        void_mask = np.in1d(segment, self.segment_ignore_index)
++        void_mask = np.isin(segment, self.segment_ignore_index)
+ 
+         assert (
+             pred["pred_classes"].shape[0]
+@@ -547,6 +547,7 @@ class InsSegEvaluator(HookBase):
+ 
+     def eval(self):
+         self.trainer.logger.info(">>>>>>>>>>>>>>>> Start Evaluation >>>>>>>>>>>>>>>>")
++        torch.cuda.empty_cache()
+         self.trainer.model.eval()
+         scenes = {}
+         for i, input_dict in enumerate(self.trainer.val_loader):
+diff --git a/pointcept/engines/hooks/misc.py b/pointcept/engines/hooks/misc.py
+index 28d9682..3eb084d 100644
+--- a/pointcept/engines/hooks/misc.py
++++ b/pointcept/engines/hooks/misc.py
+@@ -247,11 +247,16 @@ class CheckpointLoader(HookBase):
+                 f"replace keyword with: {self.replacement}"
+             )
+             weight = OrderedDict()
++            # Skip key remapping on resume: model_last.pth already has
++            # correct key names (e.g. module.backbone.enc.*). Remapping
++            # would double-prefix them (module.backbone.backbone.enc.*)
++            # causing silent load failure with strict=False.
++            skip_remap = self.trainer.cfg.resume
+             for key, value in checkpoint["state_dict"].items():
+                 if not key.startswith("module."):
+                     key = "module." + key  # xxx.xxx -> module.xxx.xxx
+                 # Now all keys contain "module." no matter DDP or not.
+-                if self.keywords in key:
++                if not skip_remap and self.keywords in key:
+                     key = key.replace(self.keywords, self.replacement, 1)
+                 if comm.get_world_size() == 1:
+                     key = key[7:]  # module.xxx.xxx -> xxx.xxx
+diff --git a/pointcept/engines/test.py b/pointcept/engines/test.py
+index 542817d..b4efc69 100644
+--- a/pointcept/engines/test.py
++++ b/pointcept/engines/test.py
+@@ -1042,7 +1042,7 @@ class InsSegTester(TesterBase):
+     def associate_instances(self, pred, segment, instance):
+         segment = segment.cpu().numpy()
+         instance = instance.cpu().numpy()
+-        void_mask = np.in1d(segment, self.segment_ignore_index)
++        void_mask = np.isin(segment, self.segment_ignore_index)
+ 
+         assert (
+             pred["pred_classes"].shape[0]
+diff --git a/pointcept/models/point_group/point_group_v1m2_custom_criteria.py b/pointcept/models/point_group/point_group_v1m2_custom_criteria.py
+index 1793020..64a60b4 100644
+--- a/pointcept/models/point_group/point_group_v1m2_custom_criteria.py
++++ b/pointcept/models/point_group/point_group_v1m2_custom_criteria.py
+@@ -138,7 +138,7 @@ class PointGroup(nn.Module):
+             )
+ 
+             if mask.sum() == 0:
+-                proposals_idx = torch.zeros(0).int()
++                proposals_idx = torch.zeros(0, 2).int()
+                 proposals_offset = torch.zeros(1).int()
+             else:
+                 center_pred_ = center_pred[mask]
+@@ -159,9 +159,13 @@ class PointGroup(nn.Module):
+                     start_len.cpu(),
+                     self.cluster_min_points,
+                 )
+-                proposals_idx[:, 1] = (
+-                    mask.nonzero().view(-1)[proposals_idx[:, 1].long()].int()
+-                )
++                if proposals_idx.dim() < 2 or proposals_idx.shape[0] == 0:
++                    proposals_idx = torch.zeros(0, 2).int()
++                    proposals_offset = torch.zeros(1).int()
++                else:
++                    proposals_idx[:, 1] = (
++                        mask.nonzero().view(-1)[proposals_idx[:, 1].long()].int()
++                    )
+ 
+             # get proposal
+             proposals_pred = torch.zeros(
+diff --git a/pointcept/models/point_transformer_v3/point_transformer_v3m1_base.py b/pointcept/models/point_transformer_v3/point_transformer_v3m1_base.py
+index 369c58e..4062dfc 100644
+--- a/pointcept/models/point_transformer_v3/point_transformer_v3m1_base.py
++++ b/pointcept/models/point_transformer_v3/point_transformer_v3m1_base.py
+@@ -96,6 +96,7 @@ class SerializedAttention(PointModule):
+             self.attn_drop = torch.nn.Dropout(attn_drop)
+ 
+         self.qkv = torch.nn.Linear(channels, channels * 3, bias=qkv_bias)
++        self.flash_dtype = None  # upstream #594
+         self.proj = torch.nn.Linear(channels, channels)
+         self.proj_drop = torch.nn.Dropout(proj_drop)
+         self.softmax = torch.nn.Softmax(dim=-1)
+@@ -205,8 +206,14 @@ class SerializedAttention(PointModule):
+             attn = self.attn_drop(attn).to(qkv.dtype)
+             feat = (attn @ v).transpose(1, 2).reshape(-1, C)
+         else:
++            if self.flash_dtype is None:
++                self.flash_dtype = (
++                    torch.bfloat16
++                    if torch.cuda.is_available() and torch.cuda.is_bf16_supported()
++                    else torch.float16
++                )
+             feat = flash_attn.flash_attn_varlen_qkvpacked_func(
+-                qkv.to(torch.bfloat16).reshape(-1, 3, H, C // H),
++                qkv.to(self.flash_dtype).reshape(-1, 3, H, C // H),
+                 cu_seqlens,
+                 max_seqlen=self.patch_size,
+                 dropout_p=self.attn_drop if self.training else 0,
+diff --git a/pointcept/models/point_transformer_v3/point_transformer_v3m2_sonata.py b/pointcept/models/point_transformer_v3/point_transformer_v3m2_sonata.py
+index cc8fee1..84b01a8 100644
+--- a/pointcept/models/point_transformer_v3/point_transformer_v3m2_sonata.py
++++ b/pointcept/models/point_transformer_v3/point_transformer_v3m2_sonata.py
+@@ -109,6 +109,7 @@ class SerializedAttention(PointModule):
+             self.attn_drop = torch.nn.Dropout(attn_drop)
+ 
+         self.qkv = torch.nn.Linear(channels, channels * 3, bias=qkv_bias)
++        self.flash_dtype = None  # upstream #594
+         self.proj = torch.nn.Linear(channels, channels)
+         self.proj_drop = torch.nn.Dropout(proj_drop)
+         self.softmax = torch.nn.Softmax(dim=-1)
+@@ -218,8 +219,14 @@ class SerializedAttention(PointModule):
+             attn = self.attn_drop(attn).to(qkv.dtype)
+             feat = (attn @ v).transpose(1, 2).reshape(-1, C)
+         else:
++            if self.flash_dtype is None:
++                self.flash_dtype = (
++                    torch.bfloat16
++                    if torch.cuda.is_available() and torch.cuda.is_bf16_supported()
++                    else torch.float16
++                )
+             feat = flash_attn.flash_attn_varlen_qkvpacked_func(
+-                qkv.to(torch.bfloat16).reshape(-1, 3, H, C // H),
++                qkv.to(self.flash_dtype).reshape(-1, 3, H, C // H),
+                 cu_seqlens,
+                 max_seqlen=self.patch_size,
+                 dropout_p=self.attn_drop if self.training else 0,
+diff --git a/pointcept/models/utils/serialization/default.py b/pointcept/models/utils/serialization/default.py
+index 15898b5..4440e25 100644
+--- a/pointcept/models/utils/serialization/default.py
++++ b/pointcept/models/utils/serialization/default.py
+@@ -46,7 +46,7 @@ def z_order_encode(grid_coord: torch.Tensor, depth: int = 16):
+ 
+ 
+ def z_order_decode(code: torch.Tensor, depth):
+-    x, y, z = z_order_decode_(code, depth=depth)
++    x, y, z, _ = z_order_decode_(code, depth=depth)  # upstream #600: key2xyz returns 4-tuple
+     grid_coord = torch.stack([x, y, z], dim=-1)  # (N,  3)
+     return grid_coord
+ 

@@ -1,0 +1,4 @@
+https://github.com/prs-eth/LitePT
+fb44846dcdb33deeb0739c53a0b338f1091aecbb
+
+Vendored by the BhopalMLS benchmark release: the upstream tree at the commit above, plus the new files listed in framework_changes/litept_new_files.txt and framework_changes/litept.patch applied. libs/sparsehash/ is reduced to its header directory src/ plus COPYING, README and AUTHORS.

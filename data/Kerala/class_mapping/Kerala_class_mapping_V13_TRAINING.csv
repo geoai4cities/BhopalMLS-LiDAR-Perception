@@ -1,0 +1,49 @@
+training_class_code,XX,ZZ,class_name,original_class_code
+0,1,0,Ground,9
+1,1,1,Flat Ground,10
+2,1,2,Gently Sloping Ground,11
+3,1,3,Steeply Sloping Ground,12
+4,2,0,Vegetation,13
+5,2,1,Low Vegetation,14
+6,2,2,Medium Vegetation,15
+7,2,3,High Vegetation,16
+8,3,0,Building,17
+9,3,1,Residential,18
+10,3,2,Commercial,19
+11,3,4,Special,21
+12,4,0,Road,22
+13,5,0,Wire,23
+14,6,0,Pole and Tower,24
+15,6,1,Electric Pole,25
+16,6,2,Telephone Pole,76
+17,7,0,Wire-Structure Connector,28
+18,7,1,Wire-Guard (Shield),72
+19,8,0,Vehicle,29
+20,8,1,Car,30
+21,8,2,Mobike (Two-Wheeler),31
+22,8,3,Cycle,32
+23,8,5,Tuktuk (3 Wheeler),34
+24,8,6,Bus,74
+25,8,9,Truck,35
+26,8,12,Rider on Vehicle,41
+27,8,13,Mobike Rider (2 Wheeler),42
+28,8,14,Cycle Rider,43
+29,9,0,Board,44
+30,9,1,Sign Board,45
+31,9,2,Advt Board,46
+32,10,0,Fencing,47
+33,10,1,Masonry Wall,48
+34,10,2,Wired Boundary Fencing,49
+35,10,3,Gate of Boundary Wall,50
+36,10,4,Road Fencing,51
+37,11,0,Human and Animal,52
+38,11,1,Male,53
+39,11,2,Female,54
+40,11,3,Child,55
+41,11,4,Animal,56
+42,11,5,Dog,57
+43,11,6,Cow,58
+44,12,0,Road Side Object,59
+45,12,4,Statue,63
+46,12,8,Dustbin,67
+47,12,9,Bus Stand,68

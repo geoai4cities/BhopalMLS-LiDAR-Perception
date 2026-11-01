@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CloudCompare>
+    <ColorScale version="1">
+        <Properties>
+            <name>Wire Structure Connector</name>
+            <uuid>{d1c1e1a0-01a0-4d87-9340-100012}</uuid>
+            <absolute>1</absolute>
+            <minValue>1</minValue>
+            <range>1</range>
+        </Properties>
+        <Data>
+            <step r="255" g="99" b="71" pos="0.0"/>
+            <step r="255" g="99" b="71" pos="1.0"/>
+        </Data>
+    </ColorScale>
+</CloudCompare>
+

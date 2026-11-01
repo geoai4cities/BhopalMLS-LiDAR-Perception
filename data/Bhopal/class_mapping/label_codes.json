@@ -1,0 +1,2220 @@
+{
+ "about": "Label spaces used in the BhopalMLS release. NPZ Bhopal_N.npz and the v9 H5 use label62; Bhopal_N_Unlabelled.npz uses V13 codes 0-8; the v10 H5 uses label68 = label62 + moving 62-67.",
+ "v13_codes": [
+  {
+   "code": 0,
+   "xx": 0,
+   "zz": 0,
+   "name": "Unlabeled",
+   "kind": "unlabelled_or_noise"
+  },
+  {
+   "code": 1,
+   "xx": 0,
+   "zz": 1,
+   "name": "Noise Points",
+   "kind": "unlabelled_or_noise"
+  },
+  {
+   "code": 2,
+   "xx": 0,
+   "zz": 2,
+   "name": "High Noise Points",
+   "kind": "unlabelled_or_noise"
+  },
+  {
+   "code": 3,
+   "xx": 0,
+   "zz": 3,
+   "name": "Moving Vehicle",
+   "kind": "moving"
+  },
+  {
+   "code": 4,
+   "xx": 0,
+   "zz": 4,
+   "name": "Moving Humans",
+   "kind": "moving"
+  },
+  {
+   "code": 5,
+   "xx": 0,
+   "zz": 5,
+   "name": "Moving Female",
+   "kind": "moving"
+  },
+  {
+   "code": 6,
+   "xx": 0,
+   "zz": 6,
+   "name": "Moving Male",
+   "kind": "moving"
+  },
+  {
+   "code": 7,
+   "xx": 0,
+   "zz": 7,
+   "name": "Moving Animal",
+   "kind": "moving"
+  },
+  {
+   "code": 8,
+   "xx": 0,
+   "zz": 8,
+   "name": "Mobike Rider Moving",
+   "kind": "moving"
+  },
+  {
+   "code": 9,
+   "xx": 1,
+   "zz": 0,
+   "name": "Ground",
+   "kind": "static"
+  },
+  {
+   "code": 10,
+   "xx": 1,
+   "zz": 1,
+   "name": "Flat Ground",
+   "kind": "static"
+  },
+  {
+   "code": 11,
+   "xx": 1,
+   "zz": 2,
+   "name": "Gently Sloping Ground",
+   "kind": "static"
+  },
+  {
+   "code": 12,
+   "xx": 1,
+   "zz": 3,
+   "name": "Steeply Sloping Ground",
+   "kind": "static"
+  },
+  {
+   "code": 13,
+   "xx": 2,
+   "zz": 0,
+   "name": "Vegetation",
+   "kind": "static"
+  },
+  {
+   "code": 14,
+   "xx": 2,
+   "zz": 1,
+   "name": "Low Vegetation",
+   "kind": "static"
+  },
+  {
+   "code": 15,
+   "xx": 2,
+   "zz": 2,
+   "name": "Medium Vegetation",
+   "kind": "static"
+  },
+  {
+   "code": 16,
+   "xx": 2,
+   "zz": 3,
+   "name": "High Vegetation",
+   "kind": "static"
+  },
+  {
+   "code": 17,
+   "xx": 3,
+   "zz": 0,
+   "name": "Building",
+   "kind": "static"
+  },
+  {
+   "code": 18,
+   "xx": 3,
+   "zz": 1,
+   "name": "Residential",
+   "kind": "static"
+  },
+  {
+   "code": 19,
+   "xx": 3,
+   "zz": 2,
+   "name": "Commercial",
+   "kind": "static"
+  },
+  {
+   "code": 20,
+   "xx": 3,
+   "zz": 3,
+   "name": "Industrial",
+   "kind": "static"
+  },
+  {
+   "code": 21,
+   "xx": 3,
+   "zz": 4,
+   "name": "Special",
+   "kind": "static"
+  },
+  {
+   "code": 22,
+   "xx": 4,
+   "zz": 0,
+   "name": "Road",
+   "kind": "static"
+  },
+  {
+   "code": 23,
+   "xx": 5,
+   "zz": 0,
+   "name": "Wire",
+   "kind": "static"
+  },
+  {
+   "code": 24,
+   "xx": 6,
+   "zz": 0,
+   "name": "Pole and Tower",
+   "kind": "static"
+  },
+  {
+   "code": 25,
+   "xx": 6,
+   "zz": 1,
+   "name": "Electric Pole",
+   "kind": "static"
+  },
+  {
+   "code": 26,
+   "xx": 6,
+   "zz": 2,
+   "name": "Mobile Tower",
+   "kind": "static"
+  },
+  {
+   "code": 27,
+   "xx": 6,
+   "zz": 3,
+   "name": "Street Light",
+   "kind": "static"
+  },
+  {
+   "code": 28,
+   "xx": 7,
+   "zz": 0,
+   "name": "Wire-Structure Connector",
+   "kind": "static"
+  },
+  {
+   "code": 29,
+   "xx": 8,
+   "zz": 0,
+   "name": "Vehicle",
+   "kind": "static"
+  },
+  {
+   "code": 30,
+   "xx": 8,
+   "zz": 1,
+   "name": "Car",
+   "kind": "static"
+  },
+  {
+   "code": 31,
+   "xx": 8,
+   "zz": 2,
+   "name": "Mobike (Two-Wheeler)",
+   "kind": "static"
+  },
+  {
+   "code": 32,
+   "xx": 8,
+   "zz": 3,
+   "name": "Cycle",
+   "kind": "static"
+  },
+  {
+   "code": 33,
+   "xx": 8,
+   "zz": 4,
+   "name": "Hand-Cart",
+   "kind": "static"
+  },
+  {
+   "code": 34,
+   "xx": 8,
+   "zz": 5,
+   "name": "Tuktuk (3 Wheeler)",
+   "kind": "static"
+  },
+  {
+   "code": 35,
+   "xx": 8,
+   "zz": 6,
+   "name": "Truck",
+   "kind": "static"
+  },
+  {
+   "code": 36,
+   "xx": 8,
+   "zz": 7,
+   "name": "Rickshaw",
+   "kind": "static"
+  },
+  {
+   "code": 37,
+   "xx": 8,
+   "zz": 8,
+   "name": "E-Rickshaw",
+   "kind": "static"
+  },
+  {
+   "code": 38,
+   "xx": 8,
+   "zz": 9,
+   "name": "Dynamic Car",
+   "kind": "static"
+  },
+  {
+   "code": 39,
+   "xx": 8,
+   "zz": 10,
+   "name": "Dynamic Tuktuk (3 Wheeler)",
+   "kind": "static"
+  },
+  {
+   "code": 40,
+   "xx": 8,
+   "zz": 11,
+   "name": "Dynamic Truck",
+   "kind": "static"
+  },
+  {
+   "code": 41,
+   "xx": 8,
+   "zz": 12,
+   "name": "Rider on Vehicle",
+   "kind": "static"
+  },
+  {
+   "code": 42,
+   "xx": 8,
+   "zz": 13,
+   "name": "Mobike Rider (2 Wheeler)",
+   "kind": "static"
+  },
+  {
+   "code": 43,
+   "xx": 8,
+   "zz": 14,
+   "name": "Cycle Rider",
+   "kind": "static"
+  },
+  {
+   "code": 44,
+   "xx": 9,
+   "zz": 0,
+   "name": "Board",
+   "kind": "static"
+  },
+  {
+   "code": 45,
+   "xx": 9,
+   "zz": 1,
+   "name": "Sign Board",
+   "kind": "static"
+  },
+  {
+   "code": 46,
+   "xx": 9,
+   "zz": 2,
+   "name": "Advt Board",
+   "kind": "static"
+  },
+  {
+   "code": 47,
+   "xx": 10,
+   "zz": 0,
+   "name": "Fencing",
+   "kind": "static"
+  },
+  {
+   "code": 48,
+   "xx": 10,
+   "zz": 1,
+   "name": "Masonry Wall",
+   "kind": "static"
+  },
+  {
+   "code": 49,
+   "xx": 10,
+   "zz": 2,
+   "name": "Wired Boundary Fencing",
+   "kind": "static"
+  },
+  {
+   "code": 50,
+   "xx": 10,
+   "zz": 3,
+   "name": "Gate of Boundary Wall",
+   "kind": "static"
+  },
+  {
+   "code": 51,
+   "xx": 10,
+   "zz": 4,
+   "name": "Road Fencing",
+   "kind": "static"
+  },
+  {
+   "code": 52,
+   "xx": 11,
+   "zz": 0,
+   "name": "Human and Animal",
+   "kind": "static"
+  },
+  {
+   "code": 53,
+   "xx": 11,
+   "zz": 1,
+   "name": "Male",
+   "kind": "static"
+  },
+  {
+   "code": 54,
+   "xx": 11,
+   "zz": 2,
+   "name": "Female",
+   "kind": "static"
+  },
+  {
+   "code": 55,
+   "xx": 11,
+   "zz": 3,
+   "name": "Child",
+   "kind": "static"
+  },
+  {
+   "code": 56,
+   "xx": 11,
+   "zz": 4,
+   "name": "Animal",
+   "kind": "static"
+  },
+  {
+   "code": 57,
+   "xx": 11,
+   "zz": 5,
+   "name": "Dog",
+   "kind": "static"
+  },
+  {
+   "code": 58,
+   "xx": 11,
+   "zz": 6,
+   "name": "Cow",
+   "kind": "static"
+  },
+  {
+   "code": 59,
+   "xx": 12,
+   "zz": 0,
+   "name": "Road Side Object",
+   "kind": "static"
+  },
+  {
+   "code": 60,
+   "xx": 12,
+   "zz": 1,
+   "name": "Barricade",
+   "kind": "static"
+  },
+  {
+   "code": 61,
+   "xx": 12,
+   "zz": 2,
+   "name": "Shop Shade",
+   "kind": "static"
+  },
+  {
+   "code": 62,
+   "xx": 12,
+   "zz": 3,
+   "name": "Road Side Furniture",
+   "kind": "static"
+  },
+  {
+   "code": 63,
+   "xx": 12,
+   "zz": 4,
+   "name": "Statue",
+   "kind": "static"
+  },
+  {
+   "code": 64,
+   "xx": 12,
+   "zz": 5,
+   "name": "Handpump",
+   "kind": "static"
+  },
+  {
+   "code": 65,
+   "xx": 12,
+   "zz": 6,
+   "name": "Road Side Public Structure",
+   "kind": "static"
+  },
+  {
+   "code": 66,
+   "xx": 12,
+   "zz": 7,
+   "name": "Mannequin",
+   "kind": "static"
+  },
+  {
+   "code": 67,
+   "xx": 12,
+   "zz": 8,
+   "name": "Dustbin",
+   "kind": "static"
+  },
+  {
+   "code": 68,
+   "xx": 12,
+   "zz": 9,
+   "name": "Bus Stand",
+   "kind": "static"
+  },
+  {
+   "code": 69,
+   "xx": 12,
+   "zz": 10,
+   "name": "Overhead Structure",
+   "kind": "static"
+  },
+  {
+   "code": 70,
+   "xx": 12,
+   "zz": 11,
+   "name": "Road Median",
+   "kind": "static"
+  }
+ ],
+ "label62": [
+  {
+   "label": 0,
+   "code": 9,
+   "xxzz": "0100",
+   "name": "Ground",
+   "parent12": 0,
+   "parent12_name": "Ground"
+  },
+  {
+   "label": 1,
+   "code": 10,
+   "xxzz": "0101",
+   "name": "Flat Ground",
+   "parent12": 0,
+   "parent12_name": "Ground"
+  },
+  {
+   "label": 2,
+   "code": 11,
+   "xxzz": "0102",
+   "name": "Gently Sloping Ground",
+   "parent12": 0,
+   "parent12_name": "Ground"
+  },
+  {
+   "label": 3,
+   "code": 12,
+   "xxzz": "0103",
+   "name": "Steeply Sloping Ground",
+   "parent12": 0,
+   "parent12_name": "Ground"
+  },
+  {
+   "label": 4,
+   "code": 13,
+   "xxzz": "0200",
+   "name": "Vegetation",
+   "parent12": 1,
+   "parent12_name": "Vegetation"
+  },
+  {
+   "label": 5,
+   "code": 14,
+   "xxzz": "0201",
+   "name": "Low Vegetation",
+   "parent12": 1,
+   "parent12_name": "Vegetation"
+  },
+  {
+   "label": 6,
+   "code": 15,
+   "xxzz": "0202",
+   "name": "Medium Vegetation",
+   "parent12": 1,
+   "parent12_name": "Vegetation"
+  },
+  {
+   "label": 7,
+   "code": 16,
+   "xxzz": "0203",
+   "name": "High Vegetation",
+   "parent12": 1,
+   "parent12_name": "Vegetation"
+  },
+  {
+   "label": 8,
+   "code": 17,
+   "xxzz": "0300",
+   "name": "Building",
+   "parent12": 2,
+   "parent12_name": "Building"
+  },
+  {
+   "label": 9,
+   "code": 18,
+   "xxzz": "0301",
+   "name": "Residential",
+   "parent12": 2,
+   "parent12_name": "Building"
+  },
+  {
+   "label": 10,
+   "code": 19,
+   "xxzz": "0302",
+   "name": "Commercial",
+   "parent12": 2,
+   "parent12_name": "Building"
+  },
+  {
+   "label": 11,
+   "code": 20,
+   "xxzz": "0303",
+   "name": "Industrial",
+   "parent12": 2,
+   "parent12_name": "Building"
+  },
+  {
+   "label": 12,
+   "code": 21,
+   "xxzz": "0304",
+   "name": "Special",
+   "parent12": 2,
+   "parent12_name": "Building"
+  },
+  {
+   "label": 13,
+   "code": 22,
+   "xxzz": "0400",
+   "name": "Road",
+   "parent12": 3,
+   "parent12_name": "Road"
+  },
+  {
+   "label": 14,
+   "code": 23,
+   "xxzz": "0500",
+   "name": "Wire",
+   "parent12": 4,
+   "parent12_name": "Wire"
+  },
+  {
+   "label": 15,
+   "code": 24,
+   "xxzz": "0600",
+   "name": "Pole and Tower",
+   "parent12": 5,
+   "parent12_name": "Pole and Tower"
+  },
+  {
+   "label": 16,
+   "code": 25,
+   "xxzz": "0601",
+   "name": "Electric Pole",
+   "parent12": 5,
+   "parent12_name": "Pole and Tower"
+  },
+  {
+   "label": 17,
+   "code": 26,
+   "xxzz": "0602",
+   "name": "Mobile Tower",
+   "parent12": 5,
+   "parent12_name": "Pole and Tower"
+  },
+  {
+   "label": 18,
+   "code": 27,
+   "xxzz": "0603",
+   "name": "Street Light",
+   "parent12": 5,
+   "parent12_name": "Pole and Tower"
+  },
+  {
+   "label": 19,
+   "code": 28,
+   "xxzz": "0700",
+   "name": "Wire-Structure Connector",
+   "parent12": 6,
+   "parent12_name": "Wire-Structure Connector"
+  },
+  {
+   "label": 20,
+   "code": 29,
+   "xxzz": "0800",
+   "name": "Vehicle",
+   "parent12": 7,
+   "parent12_name": "Vehicle"
+  },
+  {
+   "label": 21,
+   "code": 30,
+   "xxzz": "0801",
+   "name": "Car",
+   "parent12": 7,
+   "parent12_name": "Vehicle"
+  },
+  {
+   "label": 22,
+   "code": 31,
+   "xxzz": "0802",
+   "name": "Mobike (Two-Wheeler)",
+   "parent12": 7,
+   "parent12_name": "Vehicle"
+  },
+  {
+   "label": 23,
+   "code": 32,
+   "xxzz": "0803",
+   "name": "Cycle",
+   "parent12": 7,
+   "parent12_name": "Vehicle"
+  },
+  {
+   "label": 24,
+   "code": 33,
+   "xxzz": "0804",
+   "name": "Hand-Cart",
+   "parent12": 7,
+   "parent12_name": "Vehicle"
+  },
+  {
+   "label": 25,
+   "code": 34,
+   "xxzz": "0805",
+   "name": "Tuktuk (3 Wheeler)",
+   "parent12": 7,
+   "parent12_name": "Vehicle"
+  },
+  {
+   "label": 26,
+   "code": 35,
+   "xxzz": "0806",
+   "name": "Truck",
+   "parent12": 7,
+   "parent12_name": "Vehicle"
+  },
+  {
+   "label": 27,
+   "code": 36,
+   "xxzz": "0807",
+   "name": "Rickshaw",
+   "parent12": 7,
+   "parent12_name": "Vehicle"
+  },
+  {
+   "label": 28,
+   "code": 37,
+   "xxzz": "0808",
+   "name": "E-Rickshaw",
+   "parent12": 7,
+   "parent12_name": "Vehicle"
+  },
+  {
+   "label": 29,
+   "code": 38,
+   "xxzz": "0809",
+   "name": "Dynamic Car",
+   "parent12": 7,
+   "parent12_name": "Vehicle"
+  },
+  {
+   "label": 30,
+   "code": 39,
+   "xxzz": "0810",
+   "name": "Dynamic Tuktuk (3 Wheeler)",
+   "parent12": 7,
+   "parent12_name": "Vehicle"
+  },
+  {
+   "label": 31,
+   "code": 40,
+   "xxzz": "0811",
+   "name": "Dynamic Truck",
+   "parent12": 7,
+   "parent12_name": "Vehicle"
+  },
+  {
+   "label": 32,
+   "code": 41,
+   "xxzz": "0812",
+   "name": "Rider on Vehicle",
+   "parent12": 7,
+   "parent12_name": "Vehicle"
+  },
+  {
+   "label": 33,
+   "code": 42,
+   "xxzz": "0813",
+   "name": "Mobike Rider (2 Wheeler)",
+   "parent12": 7,
+   "parent12_name": "Vehicle"
+  },
+  {
+   "label": 34,
+   "code": 43,
+   "xxzz": "0814",
+   "name": "Cycle Rider",
+   "parent12": 7,
+   "parent12_name": "Vehicle"
+  },
+  {
+   "label": 35,
+   "code": 44,
+   "xxzz": "0900",
+   "name": "Board",
+   "parent12": 8,
+   "parent12_name": "Board"
+  },
+  {
+   "label": 36,
+   "code": 45,
+   "xxzz": "0901",
+   "name": "Sign Board",
+   "parent12": 8,
+   "parent12_name": "Board"
+  },
+  {
+   "label": 37,
+   "code": 46,
+   "xxzz": "0902",
+   "name": "Advt Board",
+   "parent12": 8,
+   "parent12_name": "Board"
+  },
+  {
+   "label": 38,
+   "code": 47,
+   "xxzz": "1000",
+   "name": "Fencing",
+   "parent12": 9,
+   "parent12_name": "Fencing"
+  },
+  {
+   "label": 39,
+   "code": 48,
+   "xxzz": "1001",
+   "name": "Masonry Wall",
+   "parent12": 9,
+   "parent12_name": "Fencing"
+  },
+  {
+   "label": 40,
+   "code": 49,
+   "xxzz": "1002",
+   "name": "Wired Boundary Fencing",
+   "parent12": 9,
+   "parent12_name": "Fencing"
+  },
+  {
+   "label": 41,
+   "code": 50,
+   "xxzz": "1003",
+   "name": "Gate of Boundary Wall",
+   "parent12": 9,
+   "parent12_name": "Fencing"
+  },
+  {
+   "label": 42,
+   "code": 51,
+   "xxzz": "1004",
+   "name": "Road Fencing",
+   "parent12": 9,
+   "parent12_name": "Fencing"
+  },
+  {
+   "label": 43,
+   "code": 52,
+   "xxzz": "1100",
+   "name": "Human and Animal",
+   "parent12": 10,
+   "parent12_name": "Human and Animal"
+  },
+  {
+   "label": 44,
+   "code": 53,
+   "xxzz": "1101",
+   "name": "Male",
+   "parent12": 10,
+   "parent12_name": "Human and Animal"
+  },
+  {
+   "label": 45,
+   "code": 54,
+   "xxzz": "1102",
+   "name": "Female",
+   "parent12": 10,
+   "parent12_name": "Human and Animal"
+  },
+  {
+   "label": 46,
+   "code": 55,
+   "xxzz": "1103",
+   "name": "Child",
+   "parent12": 10,
+   "parent12_name": "Human and Animal"
+  },
+  {
+   "label": 47,
+   "code": 56,
+   "xxzz": "1104",
+   "name": "Animal",
+   "parent12": 10,
+   "parent12_name": "Human and Animal"
+  },
+  {
+   "label": 48,
+   "code": 57,
+   "xxzz": "1105",
+   "name": "Dog",
+   "parent12": 10,
+   "parent12_name": "Human and Animal"
+  },
+  {
+   "label": 49,
+   "code": 58,
+   "xxzz": "1106",
+   "name": "Cow",
+   "parent12": 10,
+   "parent12_name": "Human and Animal"
+  },
+  {
+   "label": 50,
+   "code": 59,
+   "xxzz": "1200",
+   "name": "Road Side Object",
+   "parent12": 11,
+   "parent12_name": "Road Side Object"
+  },
+  {
+   "label": 51,
+   "code": 60,
+   "xxzz": "1201",
+   "name": "Barricade",
+   "parent12": 11,
+   "parent12_name": "Road Side Object"
+  },
+  {
+   "label": 52,
+   "code": 61,
+   "xxzz": "1202",
+   "name": "Shop Shade",
+   "parent12": 11,
+   "parent12_name": "Road Side Object"
+  },
+  {
+   "label": 53,
+   "code": 62,
+   "xxzz": "1203",
+   "name": "Road Side Furniture",
+   "parent12": 11,
+   "parent12_name": "Road Side Object"
+  },
+  {
+   "label": 54,
+   "code": 63,
+   "xxzz": "1204",
+   "name": "Statue",
+   "parent12": 11,
+   "parent12_name": "Road Side Object"
+  },
+  {
+   "label": 55,
+   "code": 64,
+   "xxzz": "1205",
+   "name": "Handpump",
+   "parent12": 11,
+   "parent12_name": "Road Side Object"
+  },
+  {
+   "label": 56,
+   "code": 65,
+   "xxzz": "1206",
+   "name": "Road Side Public Structure",
+   "parent12": 11,
+   "parent12_name": "Road Side Object"
+  },
+  {
+   "label": 57,
+   "code": 66,
+   "xxzz": "1207",
+   "name": "Mannequin",
+   "parent12": 11,
+   "parent12_name": "Road Side Object"
+  },
+  {
+   "label": 58,
+   "code": 67,
+   "xxzz": "1208",
+   "name": "Dustbin",
+   "parent12": 11,
+   "parent12_name": "Road Side Object"
+  },
+  {
+   "label": 59,
+   "code": 68,
+   "xxzz": "1209",
+   "name": "Bus Stand",
+   "parent12": 11,
+   "parent12_name": "Road Side Object"
+  },
+  {
+   "label": 60,
+   "code": 69,
+   "xxzz": "1210",
+   "name": "Overhead Structure",
+   "parent12": 11,
+   "parent12_name": "Road Side Object"
+  },
+  {
+   "label": 61,
+   "code": 70,
+   "xxzz": "1211",
+   "name": "Road Median",
+   "parent12": 11,
+   "parent12_name": "Road Side Object"
+  }
+ ],
+ "label68_moving": [
+  {
+   "label": 62,
+   "code": 3,
+   "name": "Moving Vehicle"
+  },
+  {
+   "label": 63,
+   "code": 4,
+   "name": "Moving Humans"
+  },
+  {
+   "label": 64,
+   "code": 5,
+   "name": "Moving Female"
+  },
+  {
+   "label": 65,
+   "code": 6,
+   "name": "Moving Male"
+  },
+  {
+   "label": 66,
+   "code": 7,
+   "name": "Moving Animal"
+  },
+  {
+   "label": 67,
+   "code": 8,
+   "name": "Mobike Rider Moving"
+  }
+ ],
+ "benchmark_12": {
+  "names": [
+   "Ground",
+   "Vegetation",
+   "Building",
+   "Road",
+   "Wire",
+   "Pole and Tower",
+   "Wire-Structure Connector",
+   "Vehicle",
+   "Board",
+   "Fencing",
+   "Human and Animal",
+   "Road Side Object"
+  ],
+  "groups_label62": [
+   [
+    0,
+    1,
+    2,
+    3
+   ],
+   [
+    4,
+    5,
+    6,
+    7
+   ],
+   [
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   [
+    13
+   ],
+   [
+    14
+   ],
+   [
+    15,
+    16,
+    17,
+    18
+   ],
+   [
+    19
+   ],
+   [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   [
+    35,
+    36,
+    37
+   ],
+   [
+    38,
+    39,
+    40,
+    41,
+    42
+   ],
+   [
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+   ],
+   [
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61
+   ]
+  ]
+ },
+ "benchmark_21": {
+  "names": [
+   "Ground",
+   "Stairs",
+   "Vegetation",
+   "Building (other)",
+   "Commercial",
+   "Road",
+   "Wire",
+   "Pole (other)",
+   "Electric Pole",
+   "Street Light",
+   "2-Wheeler",
+   "3-Wheeler",
+   "4-Wheeler",
+   "Hand-Cart",
+   "Board",
+   "Fencing",
+   "Human",
+   "Road Side Furniture",
+   "Shop Shade",
+   "Mannequin",
+   "Road Side Obj (other)"
+  ],
+  "groups_label62": [
+   [
+    0,
+    1,
+    2
+   ],
+   [
+    3
+   ],
+   [
+    4,
+    5,
+    6,
+    7
+   ],
+   [
+    8,
+    9,
+    11,
+    12
+   ],
+   [
+    10
+   ],
+   [
+    13
+   ],
+   [
+    14
+   ],
+   [
+    15,
+    17,
+    19
+   ],
+   [
+    16
+   ],
+   [
+    18
+   ],
+   [
+    22,
+    23,
+    32,
+    33,
+    34
+   ],
+   [
+    25,
+    27,
+    28,
+    30
+   ],
+   [
+    20,
+    21,
+    26,
+    29,
+    31
+   ],
+   [
+    24
+   ],
+   [
+    35,
+    36,
+    37
+   ],
+   [
+    38,
+    39,
+    40,
+    41,
+    42
+   ],
+   [
+    43,
+    44,
+    45,
+    46
+   ],
+   [
+    53
+   ],
+   [
+    52
+   ],
+   [
+    57
+   ],
+   [
+    50,
+    51,
+    54,
+    55,
+    56,
+    58,
+    59,
+    60,
+    61
+   ]
+  ]
+ },
+ "global_id_format": "NXXZZYYYY: N = survey path 1-8, XXZZ = V13 class code (XX parent 01-12, ZZ subclass), YYYY = instance number within the path",
+ "rgb_zeroed_for_privacy": {
+  "Bhopal_N.npz and v9 H5 (label62)": [
+   32,
+   33,
+   34,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49
+  ],
+  "Bhopal_N_Unlabelled.npz (V13 codes)": [
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "v10 H5 (label68)": [
+   32,
+   33,
+   34,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   63,
+   64,
+   65,
+   66,
+   67
+  ]
+ },
+ "palettes_rgb": {
+  "12c": [
+   {
+    "id": 0,
+    "name": "Ground",
+    "color": [
+     128,
+     128,
+     128
+    ]
+   },
+   {
+    "id": 1,
+    "name": "Vegetation",
+    "color": [
+     0,
+     128,
+     0
+    ]
+   },
+   {
+    "id": 2,
+    "name": "Building",
+    "color": [
+     128,
+     0,
+     0
+    ]
+   },
+   {
+    "id": 3,
+    "name": "Road",
+    "color": [
+     64,
+     64,
+     64
+    ]
+   },
+   {
+    "id": 4,
+    "name": "Wire",
+    "color": [
+     255,
+     255,
+     0
+    ]
+   },
+   {
+    "id": 5,
+    "name": "Pole and Tower",
+    "color": [
+     255,
+     0,
+     255
+    ]
+   },
+   {
+    "id": 6,
+    "name": "Wire-Structure Connector",
+    "color": [
+     255,
+     128,
+     0
+    ]
+   },
+   {
+    "id": 7,
+    "name": "Vehicle",
+    "color": [
+     0,
+     0,
+     255
+    ]
+   },
+   {
+    "id": 8,
+    "name": "Board",
+    "color": [
+     0,
+     255,
+     255
+    ]
+   },
+   {
+    "id": 9,
+    "name": "Fencing",
+    "color": [
+     128,
+     0,
+     128
+    ]
+   },
+   {
+    "id": 10,
+    "name": "Human and Animal",
+    "color": [
+     255,
+     0,
+     0
+    ]
+   },
+   {
+    "id": 11,
+    "name": "Road Side Object",
+    "color": [
+     0,
+     128,
+     128
+    ]
+   }
+  ],
+  "21c": [
+   {
+    "id": 0,
+    "name": "Ground",
+    "color": [
+     128,
+     128,
+     128
+    ]
+   },
+   {
+    "id": 1,
+    "name": "Stairs",
+    "color": [
+     193,
+     135,
+     93
+    ]
+   },
+   {
+    "id": 2,
+    "name": "Vegetation",
+    "color": [
+     0,
+     128,
+     0
+    ]
+   },
+   {
+    "id": 3,
+    "name": "Building (other)",
+    "color": [
+     128,
+     0,
+     0
+    ]
+   },
+   {
+    "id": 4,
+    "name": "Commercial",
+    "color": [
+     162,
+     8,
+     8
+    ]
+   },
+   {
+    "id": 5,
+    "name": "Road",
+    "color": [
+     64,
+     64,
+     64
+    ]
+   },
+   {
+    "id": 6,
+    "name": "Wire",
+    "color": [
+     255,
+     255,
+     0
+    ]
+   },
+   {
+    "id": 7,
+    "name": "Pole (other)",
+    "color": [
+     255,
+     0,
+     255
+    ]
+   },
+   {
+    "id": 8,
+    "name": "Electric Pole",
+    "color": [
+     194,
+     6,
+     235
+    ]
+   },
+   {
+    "id": 9,
+    "name": "Street Light",
+    "color": [
+     222,
+     25,
+     226
+    ]
+   },
+   {
+    "id": 10,
+    "name": "2-Wheeler",
+    "color": [
+     50,
+     116,
+     250
+    ]
+   },
+   {
+    "id": 11,
+    "name": "3-Wheeler",
+    "color": [
+     51,
+     68,
+     250
+    ]
+   },
+   {
+    "id": 12,
+    "name": "4-Wheeler",
+    "color": [
+     51,
+     129,
+     250
+    ]
+   },
+   {
+    "id": 13,
+    "name": "Hand-Cart",
+    "color": [
+     50,
+     84,
+     250
+    ]
+   },
+   {
+    "id": 14,
+    "name": "Board",
+    "color": [
+     0,
+     255,
+     255
+    ]
+   },
+   {
+    "id": 15,
+    "name": "Fencing",
+    "color": [
+     128,
+     0,
+     128
+    ]
+   },
+   {
+    "id": 16,
+    "name": "Human",
+    "color": [
+     255,
+     0,
+     0
+    ]
+   },
+   {
+    "id": 17,
+    "name": "Road Side Furniture",
+    "color": [
+     22,
+     169,
+     176
+    ]
+   },
+   {
+    "id": 18,
+    "name": "Shop Shade",
+    "color": [
+     32,
+     169,
+     167
+    ]
+   },
+   {
+    "id": 19,
+    "name": "Mannequin",
+    "color": [
+     26,
+     173,
+     149
+    ]
+   },
+   {
+    "id": 20,
+    "name": "Road Side Object (other)",
+    "color": [
+     0,
+     128,
+     128
+    ]
+   }
+  ],
+  "68c": [
+   {
+    "id": 0,
+    "name": "Ground",
+    "color": [
+     128,
+     128,
+     128
+    ]
+   },
+   {
+    "id": 1,
+    "name": "Flat Ground",
+    "color": [
+     193,
+     119,
+     90
+    ]
+   },
+   {
+    "id": 2,
+    "name": "Gently Sloping Ground",
+    "color": [
+     195,
+     132,
+     97
+    ]
+   },
+   {
+    "id": 3,
+    "name": "Steeply Sloping Ground",
+    "color": [
+     193,
+     135,
+     93
+    ]
+   },
+   {
+    "id": 4,
+    "name": "Vegetation",
+    "color": [
+     0,
+     128,
+     0
+    ]
+   },
+   {
+    "id": 5,
+    "name": "Low Vegetation",
+    "color": [
+     28,
+     186,
+     51
+    ]
+   },
+   {
+    "id": 6,
+    "name": "Medium Vegetation",
+    "color": [
+     61,
+     161,
+     82
+    ]
+   },
+   {
+    "id": 7,
+    "name": "High Vegetation",
+    "color": [
+     71,
+     174,
+     42
+    ]
+   },
+   {
+    "id": 8,
+    "name": "Building",
+    "color": [
+     128,
+     0,
+     0
+    ]
+   },
+   {
+    "id": 9,
+    "name": "Residential",
+    "color": [
+     150,
+     36,
+     44
+    ]
+   },
+   {
+    "id": 10,
+    "name": "Commercial",
+    "color": [
+     162,
+     8,
+     8
+    ]
+   },
+   {
+    "id": 11,
+    "name": "Industrial",
+    "color": [
+     146,
+     62,
+     56
+    ]
+   },
+   {
+    "id": 12,
+    "name": "Special",
+    "color": [
+     145,
+     62,
+     48
+    ]
+   },
+   {
+    "id": 13,
+    "name": "Road",
+    "color": [
+     64,
+     64,
+     64
+    ]
+   },
+   {
+    "id": 14,
+    "name": "Wire",
+    "color": [
+     255,
+     255,
+     0
+    ]
+   },
+   {
+    "id": 15,
+    "name": "Pole and Tower",
+    "color": [
+     255,
+     0,
+     255
+    ]
+   },
+   {
+    "id": 16,
+    "name": "Electric Pole",
+    "color": [
+     194,
+     6,
+     235
+    ]
+   },
+   {
+    "id": 17,
+    "name": "Mobile Tower",
+    "color": [
+     214,
+     47,
+     225
+    ]
+   },
+   {
+    "id": 18,
+    "name": "Street Light",
+    "color": [
+     222,
+     25,
+     226
+    ]
+   },
+   {
+    "id": 19,
+    "name": "Wire-Structure Connector",
+    "color": [
+     255,
+     128,
+     0
+    ]
+   },
+   {
+    "id": 20,
+    "name": "Vehicle",
+    "color": [
+     0,
+     0,
+     255
+    ]
+   },
+   {
+    "id": 21,
+    "name": "Car",
+    "color": [
+     51,
+     129,
+     250
+    ]
+   },
+   {
+    "id": 22,
+    "name": "Mobike (Two-Wheeler)",
+    "color": [
+     50,
+     116,
+     250
+    ]
+   },
+   {
+    "id": 23,
+    "name": "Cycle",
+    "color": [
+     51,
+     95,
+     250
+    ]
+   },
+   {
+    "id": 24,
+    "name": "Hand-Cart",
+    "color": [
+     50,
+     84,
+     250
+    ]
+   },
+   {
+    "id": 25,
+    "name": "Tuktuk (3 Wheeler)",
+    "color": [
+     51,
+     68,
+     250
+    ]
+   },
+   {
+    "id": 26,
+    "name": "Truck",
+    "color": [
+     52,
+     51,
+     250
+    ]
+   },
+   {
+    "id": 27,
+    "name": "Rickshaw",
+    "color": [
+     70,
+     51,
+     250
+    ]
+   },
+   {
+    "id": 28,
+    "name": "E-Rickshaw",
+    "color": [
+     51,
+     114,
+     250
+    ]
+   },
+   {
+    "id": 29,
+    "name": "Dynamic Car",
+    "color": [
+     51,
+     102,
+     250
+    ]
+   },
+   {
+    "id": 30,
+    "name": "Dynamic Tuktuk (3 Wheeler)",
+    "color": [
+     50,
+     94,
+     250
+    ]
+   },
+   {
+    "id": 31,
+    "name": "Dynamic Truck",
+    "color": [
+     52,
+     70,
+     249
+    ]
+   },
+   {
+    "id": 32,
+    "name": "Rider on Vehicle",
+    "color": [
+     51,
+     63,
+     250
+    ]
+   },
+   {
+    "id": 33,
+    "name": "Mobike Rider (2 Wheeler)",
+    "color": [
+     50,
+     56,
+     250
+    ]
+   },
+   {
+    "id": 34,
+    "name": "Cycle Rider",
+    "color": [
+     73,
+     51,
+     250
+    ]
+   },
+   {
+    "id": 35,
+    "name": "Board",
+    "color": [
+     0,
+     255,
+     255
+    ]
+   },
+   {
+    "id": 36,
+    "name": "Sign Board",
+    "color": [
+     73,
+     244,
+     242
+    ]
+   },
+   {
+    "id": 37,
+    "name": "Advt Board",
+    "color": [
+     83,
+     221,
+     247
+    ]
+   },
+   {
+    "id": 38,
+    "name": "Fencing",
+    "color": [
+     128,
+     0,
+     128
+    ]
+   },
+   {
+    "id": 39,
+    "name": "Masonry Wall",
+    "color": [
+     125,
+     48,
+     120
+    ]
+   },
+   {
+    "id": 40,
+    "name": "Wired Boundary Fencing",
+    "color": [
+     133,
+     51,
+     121
+    ]
+   },
+   {
+    "id": 41,
+    "name": "Gate of Boundary Wall",
+    "color": [
+     124,
+     40,
+     106
+    ]
+   },
+   {
+    "id": 42,
+    "name": "Road Fencing",
+    "color": [
+     121,
+     53,
+     140
+    ]
+   },
+   {
+    "id": 43,
+    "name": "Human and Animal",
+    "color": [
+     255,
+     0,
+     0
+    ]
+   },
+   {
+    "id": 44,
+    "name": "Male",
+    "color": [
+     250,
+     75,
+     110
+    ]
+   },
+   {
+    "id": 45,
+    "name": "Female",
+    "color": [
+     250,
+     73,
+     94
+    ]
+   },
+   {
+    "id": 46,
+    "name": "Child",
+    "color": [
+     250,
+     70,
+     77
+    ]
+   },
+   {
+    "id": 47,
+    "name": "Animal",
+    "color": [
+     250,
+     78,
+     64
+    ]
+   },
+   {
+    "id": 48,
+    "name": "Dog",
+    "color": [
+     250,
+     90,
+     65
+    ]
+   },
+   {
+    "id": 49,
+    "name": "Cow",
+    "color": [
+     250,
+     68,
+     124
+    ]
+   },
+   {
+    "id": 50,
+    "name": "Road Side Object",
+    "color": [
+     0,
+     128,
+     128
+    ]
+   },
+   {
+    "id": 51,
+    "name": "Barricade",
+    "color": [
+     37,
+     166,
+     154
+    ]
+   },
+   {
+    "id": 52,
+    "name": "Shop Shade",
+    "color": [
+     32,
+     169,
+     167
+    ]
+   },
+   {
+    "id": 53,
+    "name": "Road Side Furniture",
+    "color": [
+     22,
+     169,
+     176
+    ]
+   },
+   {
+    "id": 54,
+    "name": "Statue",
+    "color": [
+     60,
+     144,
+     157
+    ]
+   },
+   {
+    "id": 55,
+    "name": "Handpump",
+    "color": [
+     46,
+     137,
+     160
+    ]
+   },
+   {
+    "id": 56,
+    "name": "Road Side Public Structure",
+    "color": [
+     59,
+     155,
+     132
+    ]
+   },
+   {
+    "id": 57,
+    "name": "Mannequin",
+    "color": [
+     26,
+     173,
+     149
+    ]
+   },
+   {
+    "id": 58,
+    "name": "Dustbin",
+    "color": [
+     55,
+     154,
+     146
+    ]
+   },
+   {
+    "id": 59,
+    "name": "Bus Stand",
+    "color": [
+     59,
+     155,
+     154
+    ]
+   },
+   {
+    "id": 60,
+    "name": "Overhead Structure",
+    "color": [
+     58,
+     148,
+     153
+    ]
+   },
+   {
+    "id": 61,
+    "name": "Road Median",
+    "color": [
+     51,
+     144,
+     158
+    ]
+   },
+   {
+    "id": 62,
+    "name": "Moving Vehicle",
+    "color": [
+     20,
+     66,
+     249
+    ]
+   },
+   {
+    "id": 63,
+    "name": "Moving Humans",
+    "color": [
+     249,
+     29,
+     169
+    ]
+   },
+   {
+    "id": 64,
+    "name": "Moving Female",
+    "color": [
+     249,
+     15,
+     98
+    ]
+   },
+   {
+    "id": 65,
+    "name": "Moving Male",
+    "color": [
+     231,
+     9,
+     72
+    ]
+   },
+   {
+    "id": 66,
+    "name": "Moving Animal",
+    "color": [
+     240,
+     33,
+     6
+    ]
+   },
+   {
+    "id": 67,
+    "name": "Mobike Rider Moving",
+    "color": [
+     29,
+     31,
+     249
+    ]
+   }
+  ]
+ }
+}

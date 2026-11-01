@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CloudCompare>
+    <ColorScale version="1">
+        <Properties>
+            <name>Building</name>
+            <uuid>{b1a22c50-ff2f-4b77-96c5-1c12a9a8c001}</uuid>
+            <absolute>1</absolute>
+            <minValue>1</minValue>
+            <range>1</range>
+        </Properties>
+        <Data>
+            <step r="139" g="69" b="19" pos="0.0"/>   <!-- Brown for Building -->
+            <step r="139" g="69" b="19" pos="1.0"/>
+        </Data>
+    </ColorScale>
+</CloudCompare>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CloudCompare>
+    <ColorScale version="1">
+        <Properties>
+            <name>Board</name>
+            <uuid>{a8b45d91-4c6b-4f85-93e3-1c12b7a8f201}</uuid>
+            <absolute>1</absolute>
+            <minValue>1</minValue>
+            <range>1</range>
+        </Properties>
+        <Data>
+            <step r="160" g="32" b="240" pos="0.0"/>   <!-- Purple color for Board -->
+            <step r="160" g="32" b="240" pos="1.0"/>
+        </Data>
+    </ColorScale>
+</CloudCompare>
+

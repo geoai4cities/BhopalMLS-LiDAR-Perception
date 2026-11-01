@@ -1,0 +1,4 @@
+https://github.com/Pointcept/Pointcept
+cca1802c9083759f40a71ff740b7522c47dc112a
+
+Vendored by the BhopalMLS benchmark release: the upstream tree at the commit above, plus the new files listed in framework_changes/pointcept_new_files.txt and framework_changes/pointcept.patch applied.

@@ -1,0 +1,739 @@
+{
+  "utonia_lp": {
+    "disjoint": {
+      "mIoU": 64.84194279902688,
+      "mAcc": 81.32848889939199,
+      "allAcc": 90.23233315176638,
+      "per_class_IoU": {
+        "Ground": 27.244756700296254,
+        "Vegetation": 96.97907956273609,
+        "Building": 90.50249970189229,
+        "Road": 85.83806975934436,
+        "Wire": 82.69371159423747,
+        "Pole and Tower": 60.052670608731695,
+        "Wire-Structure Connector": 65.25230485499219,
+        "Vehicle": 85.15350194555538,
+        "Board": 50.217791161790885,
+        "Fencing": 52.40624962111874,
+        "Human and Animal": 41.48806529151992,
+        "Road Side Object": 40.27461278610731
+      }
+    },
+    "overlapping": {
+      "mIoU": 62.181439009021055,
+      "mAcc": 77.79479785036844,
+      "allAcc": 91.97335380597076,
+      "per_class_IoU": {
+        "Ground": 23.12213171607705,
+        "Vegetation": 96.02881045423833,
+        "Building": 92.30031467416278,
+        "Road": 88.58892247179072,
+        "Wire": 80.79222049635108,
+        "Pole and Tower": 57.50555897210917,
+        "Wire-Structure Connector": 52.69940104278882,
+        "Vehicle": 87.44931042203616,
+        "Board": 58.75861031002437,
+        "Fencing": 10.532825957204318,
+        "Human and Animal": 50.391721281766664,
+        "Road Side Object": 48.00744030970322
+      }
+    },
+    "full": {
+      "mIoU": 64.17867425344804,
+      "mAcc": 79.55100490321037,
+      "allAcc": 91.31991139550396,
+      "per_class_IoU": {
+        "Ground": 25.023034854096988,
+        "Vegetation": 96.76257543650442,
+        "Building": 91.71863447710471,
+        "Road": 87.43272662083442,
+        "Wire": 81.47322251389231,
+        "Pole and Tower": 58.64262940633513,
+        "Wire-Structure Connector": 59.44406949978617,
+        "Vehicle": 86.24964547030233,
+        "Board": 56.74395668924323,
+        "Fencing": 34.48504246089402,
+        "Human and Animal": 47.39544877227338,
+        "Road Side Object": 44.77310484010935
+      }
+    },
+    "n_missing_pred": 3,
+    "missing_pred": [
+      "S2_0001_bhopal7",
+      "S3_0005_a_bhopal7",
+      "S3_0005_b_bhopal7"
+    ],
+    "n_length_mismatch": 0,
+    "length_mismatch": []
+  },
+  "utonia_dp": {
+    "disjoint": {
+      "mIoU": 66.545943647135,
+      "mAcc": 81.16882136608649,
+      "allAcc": 90.63721176555903,
+      "per_class_IoU": {
+        "Ground": 28.65538545490892,
+        "Vegetation": 96.93589738082044,
+        "Building": 91.238801967806,
+        "Road": 84.15092421501906,
+        "Wire": 85.3510496917158,
+        "Pole and Tower": 62.65553848706897,
+        "Wire-Structure Connector": 67.8110918087485,
+        "Vehicle": 89.10603856764872,
+        "Board": 54.86711025500104,
+        "Fencing": 34.54329756188487,
+        "Human and Animal": 60.17158784190906,
+        "Road Side Object": 43.0646005330886
+      }
+    },
+    "overlapping": {
+      "mIoU": 67.12666912703179,
+      "mAcc": 78.45261012554784,
+      "allAcc": 92.64794425028616,
+      "per_class_IoU": {
+        "Ground": 23.377266880148888,
+        "Vegetation": 97.9910490604142,
+        "Building": 93.06916176333921,
+        "Road": 87.05453469404327,
+        "Wire": 84.03067337263262,
+        "Pole and Tower": 58.82119501661269,
+        "Wire-Structure Connector": 82.08314808879331,
+        "Vehicle": 93.86527207171255,
+        "Board": 59.921250428419995,
+        "Fencing": 5.3874477581899765,
+        "Human and Animal": 68.47513042953788,
+        "Road Side Object": 51.44389996053699
+      }
+    },
+    "full": {
+      "mIoU": 67.02869791483957,
+      "mAcc": 79.52952265701767,
+      "allAcc": 91.8932732023287,
+      "per_class_IoU": {
+        "Ground": 25.740129679381248,
+        "Vegetation": 97.17346041540193,
+        "Building": 92.47807003341107,
+        "Road": 85.83661992510211,
+        "Wire": 84.50250960651996,
+        "Pole and Tower": 60.51617727176518,
+        "Wire-Structure Connector": 73.09668707146103,
+        "Vehicle": 91.3486514012098,
+        "Board": 58.758634910815545,
+        "Fencing": 21.407295507305747,
+        "Human and Animal": 65.76372907302496,
+        "Road Side Object": 47.72241008267634
+      }
+    },
+    "n_missing_pred": 3,
+    "missing_pred": [
+      "S2_0001_bhopal7",
+      "S3_0005_a_bhopal7",
+      "S3_0005_b_bhopal7"
+    ],
+    "n_length_mismatch": 0,
+    "length_mismatch": []
+  },
+  "utonia_lora": {
+    "disjoint": {
+      "mIoU": 69.84725407763887,
+      "mAcc": 83.89720087091874,
+      "allAcc": 91.35979335699496,
+      "per_class_IoU": {
+        "Ground": 28.879590727359712,
+        "Vegetation": 97.83218257197348,
+        "Building": 91.28672323685598,
+        "Road": 86.19967338255498,
+        "Wire": 85.19209957171076,
+        "Pole and Tower": 69.59159931367883,
+        "Wire-Structure Connector": 76.96628879523014,
+        "Vehicle": 89.40001470617517,
+        "Board": 57.920390854194494,
+        "Fencing": 58.165464030862104,
+        "Human and Animal": 53.88435108777194,
+        "Road Side Object": 42.848670653298775
+      }
+    },
+    "overlapping": {
+      "mIoU": 68.20712825612999,
+      "mAcc": 79.16917645786134,
+      "allAcc": 93.34946623747878,
+      "per_class_IoU": {
+        "Ground": 25.362790944024887,
+        "Vegetation": 97.76239692630169,
+        "Building": 93.4672323522781,
+        "Road": 89.1999593773905,
+        "Wire": 85.34608327814459,
+        "Pole and Tower": 64.53525525456912,
+        "Wire-Structure Connector": 81.33028542400864,
+        "Vehicle": 92.50924947800327,
+        "Board": 65.5164380392455,
+        "Fencing": 8.253786659993088,
+        "Human and Animal": 62.75077864137602,
+        "Road Side Object": 52.45128269822443
+      }
+    },
+    "full": {
+      "mIoU": 69.76987333019605,
+      "mAcc": 81.7626052009627,
+      "allAcc": 92.6026993108923,
+      "per_class_IoU": {
+        "Ground": 27.016978620712596,
+        "Vegetation": 97.81644020734679,
+        "Building": 92.76251856116279,
+        "Road": 87.93918776670932,
+        "Wire": 85.29096474992099,
+        "Pole and Tower": 66.77245323999911,
+        "Wire-Structure Connector": 78.64328076140838,
+        "Vehicle": 90.86095615990106,
+        "Board": 63.83882820821489,
+        "Fencing": 38.1246545812987,
+        "Human and Animal": 59.846913885030915,
+        "Road Side Object": 48.32530322064708
+      }
+    },
+    "n_missing_pred": 3,
+    "missing_pred": [
+      "S2_0001_bhopal7",
+      "S3_0005_a_bhopal7",
+      "S3_0005_b_bhopal7"
+    ],
+    "n_length_mismatch": 0,
+    "length_mismatch": []
+  },
+  "utonia_ft": {
+    "disjoint": {
+      "mIoU": 71.2936172243777,
+      "mAcc": 86.14595712673884,
+      "allAcc": 91.50607640103861,
+      "per_class_IoU": {
+        "Ground": 27.877489694411366,
+        "Vegetation": 97.48809276038565,
+        "Building": 92.24454610098947,
+        "Road": 84.09128026531349,
+        "Wire": 87.10493789389953,
+        "Pole and Tower": 70.97614680468085,
+        "Wire-Structure Connector": 80.17452106771114,
+        "Vehicle": 88.84381160818889,
+        "Board": 63.251421793741066,
+        "Fencing": 62.065894257828866,
+        "Human and Animal": 56.81715435040342,
+        "Road Side Object": 44.588110094978276
+      }
+    },
+    "overlapping": {
+      "mIoU": 69.64463760820952,
+      "mAcc": 80.90427275566267,
+      "allAcc": 93.40576408639606,
+      "per_class_IoU": {
+        "Ground": 24.970507360812007,
+        "Vegetation": 97.15533290972263,
+        "Building": 93.91940199639932,
+        "Road": 86.80467549653194,
+        "Wire": 87.76784125662034,
+        "Pole and Tower": 66.71645938759755,
+        "Wire-Structure Connector": 87.86024422401238,
+        "Vehicle": 94.67249077209271,
+        "Board": 68.47707668341809,
+        "Fencing": 2.9490006196590435,
+        "Human and Animal": 67.9348999361539,
+        "Road Side Object": 56.50772065549449
+      }
+    },
+    "full": {
+      "mIoU": 71.2779921204753,
+      "mAcc": 83.88867540830489,
+      "allAcc": 92.69277053444918,
+      "per_class_IoU": {
+        "Ground": 26.26952067247435,
+        "Vegetation": 97.41299552984222,
+        "Building": 93.3782862179275,
+        "Road": 85.6594668207228,
+        "Wire": 87.53059548192952,
+        "Pole and Tower": 68.61284747337083,
+        "Wire-Structure Connector": 83.03154793903649,
+        "Vehicle": 91.53767087602259,
+        "Board": 67.35629964659516,
+        "Fencing": 38.7943231029831,
+        "Human and Animal": 64.2396445848251,
+        "Road Side Object": 51.51270709997387
+      }
+    },
+    "n_missing_pred": 3,
+    "missing_pred": [
+      "S2_0001_bhopal7",
+      "S3_0005_a_bhopal7",
+      "S3_0005_b_bhopal7"
+    ],
+    "n_length_mismatch": 0,
+    "length_mismatch": []
+  },
+  "ptv3_sup": {
+    "disjoint": {
+      "mIoU": 66.81324516280507,
+      "mAcc": 78.65587835327634,
+      "allAcc": 91.29223920420968,
+      "per_class_IoU": {
+        "Ground": 23.138268602275343,
+        "Vegetation": 96.83958783596847,
+        "Building": 91.42378413631803,
+        "Road": 85.92903802762858,
+        "Wire": 87.94230861812375,
+        "Pole and Tower": 72.59165558003097,
+        "Wire-Structure Connector": 75.0378862304222,
+        "Vehicle": 88.55966286812719,
+        "Board": 52.761443136100205,
+        "Fencing": 20.577537675674954,
+        "Human and Animal": 63.404059183624575,
+        "Road Side Object": 43.5537100593666
+      }
+    },
+    "overlapping": {
+      "mIoU": 68.52199753809799,
+      "mAcc": 78.80356461614899,
+      "allAcc": 93.38523401108525,
+      "per_class_IoU": {
+        "Ground": 21.48925197363574,
+        "Vegetation": 98.03034738646045,
+        "Building": 93.38455317473873,
+        "Road": 88.45696790100064,
+        "Wire": 87.62625060017098,
+        "Pole and Tower": 66.91282229563039,
+        "Wire-Structure Connector": 85.1809897545336,
+        "Vehicle": 94.14987152893374,
+        "Board": 58.25143473019294,
+        "Fencing": 4.981298324980411,
+        "Human and Animal": 67.24066111099106,
+        "Road Side Object": 56.55952167590706
+      }
+    },
+    "full": {
+      "mIoU": 67.88414716219266,
+      "mAcc": 78.75431144212185,
+      "allAcc": 92.59968814843477,
+      "per_class_IoU": {
+        "Ground": 22.236707526068127,
+        "Vegetation": 97.10564236336529,
+        "Building": 92.74814954280893,
+        "Road": 87.38898945890206,
+        "Wire": 87.73963915547793,
+        "Pole and Tower": 69.40833650474434,
+        "Wire-Structure Connector": 78.74923827310654,
+        "Vehicle": 91.18635572797926,
+        "Board": 57.04942238884798,
+        "Fencing": 13.874391125716892,
+        "Human and Animal": 66.09484246875496,
+        "Road Side Object": 51.028051410539696
+      }
+    },
+    "n_missing_pred": 3,
+    "missing_pred": [
+      "S2_0001_bhopal7",
+      "S3_0005_a_bhopal7",
+      "S3_0005_b_bhopal7"
+    ],
+    "n_length_mismatch": 0,
+    "length_mismatch": []
+  },
+  "litept_L_sup": {
+    "disjoint": {
+      "mIoU": 66.95583853496714,
+      "mAcc": 80.95130699174945,
+      "allAcc": 90.05653997772922,
+      "per_class_IoU": {
+        "Ground": 25.399631644792496,
+        "Vegetation": 97.13485704975123,
+        "Building": 89.92506277434258,
+        "Road": 84.41830261650802,
+        "Wire": 85.58396093447286,
+        "Pole and Tower": 69.18209607603939,
+        "Wire-Structure Connector": 82.34726818670944,
+        "Vehicle": 85.72017860946423,
+        "Board": 49.85442138754927,
+        "Fencing": 30.842403465279556,
+        "Human and Animal": 59.37085770244169,
+        "Road Side Object": 43.69102197225495
+      }
+    },
+    "overlapping": {
+      "mIoU": 67.50936216639796,
+      "mAcc": 79.97263126665972,
+      "allAcc": 91.78279808647132,
+      "per_class_IoU": {
+        "Ground": 19.862195436305306,
+        "Vegetation": 97.31915275337649,
+        "Building": 92.20502524554348,
+        "Road": 85.55509336420943,
+        "Wire": 86.3326355839232,
+        "Pole and Tower": 64.73342514553315,
+        "Wire-Structure Connector": 85.39399065459436,
+        "Vehicle": 91.06041336451311,
+        "Board": 59.48643344229916,
+        "Fencing": 9.661380624115477,
+        "Human and Animal": 65.83925644359032,
+        "Road Side Object": 52.66334393877208
+      }
+    },
+    "full": {
+      "mIoU": 67.52784558567268,
+      "mAcc": 80.44646027678147,
+      "allAcc": 91.13489637609224,
+      "per_class_IoU": {
+        "Ground": 22.096549208497304,
+        "Vegetation": 97.176450546283,
+        "Building": 91.466016238647,
+        "Road": 85.07493790036503,
+        "Wire": 86.06280395334184,
+        "Pole and Tower": 66.6865320042168,
+        "Wire-Structure Connector": 83.47263941491447,
+        "Vehicle": 88.2341209941073,
+        "Board": 57.193920804717045,
+        "Fencing": 20.235659410944997,
+        "Human and Animal": 63.877516863869886,
+        "Road Side Object": 48.75699968816743
+      }
+    },
+    "n_missing_pred": 3,
+    "missing_pred": [
+      "S2_0001_bhopal7",
+      "S3_0005_a_bhopal7",
+      "S3_0005_b_bhopal7"
+    ],
+    "n_length_mismatch": 0,
+    "length_mismatch": []
+  },
+  "kpconvx_sup": {
+    "disjoint": {
+      "mIoU": 66.67207103747091,
+      "mAcc": 80.86874460677525,
+      "allAcc": 91.22567008686111,
+      "per_class_IoU": {
+        "Ground": 27.081783777534174,
+        "Vegetation": 97.31453942185288,
+        "Building": 91.34966432706779,
+        "Road": 85.52428961629734,
+        "Wire": 86.66770512815543,
+        "Pole and Tower": 68.4747160697067,
+        "Wire-Structure Connector": 75.7278238023896,
+        "Vehicle": 87.54208305839197,
+        "Board": 43.269845945104215,
+        "Fencing": 34.90165922225434,
+        "Human and Animal": 57.03847408842579,
+        "Road Side Object": 45.1722679924708
+      }
+    },
+    "overlapping": {
+      "mIoU": 65.62141315607474,
+      "mAcc": 78.55675137523002,
+      "allAcc": 92.46800263842964,
+      "per_class_IoU": {
+        "Ground": 22.10745631244101,
+        "Vegetation": 96.98447230702492,
+        "Building": 92.76701682980115,
+        "Road": 86.69068640088345,
+        "Wire": 86.01181523759587,
+        "Pole and Tower": 58.84933317037222,
+        "Wire-Structure Connector": 78.51221378390171,
+        "Vehicle": 91.53370964262348,
+        "Board": 59.67888570340789,
+        "Fencing": 0.7705404809403414,
+        "Human and Animal": 61.743911353234715,
+        "Road Side Object": 51.80691665067011
+      }
+    },
+    "full": {
+      "mIoU": 66.77623746060496,
+      "mAcc": 80.09959311480966,
+      "allAcc": 92.00172857376651,
+      "per_class_IoU": {
+        "Ground": 24.2813703798425,
+        "Vegetation": 97.23979321015818,
+        "Building": 92.30757546889306,
+        "Road": 86.20220963981738,
+        "Wire": 86.24708162081936,
+        "Pole and Tower": 62.86538974847738,
+        "Wire-Structure Connector": 76.7980118970221,
+        "Vehicle": 89.39897880874663,
+        "Board": 55.820725734487716,
+        "Fencing": 20.7423332266029,
+        "Human and Animal": 60.29501740306339,
+        "Road Side Object": 49.11636238932895
+      }
+    },
+    "n_missing_pred": 3,
+    "missing_pred": [
+      "S2_0001_bhopal7",
+      "S3_0005_a_bhopal7",
+      "S3_0005_b_bhopal7"
+    ],
+    "n_length_mismatch": 0,
+    "length_mismatch": []
+  },
+  "concerto_lp": {
+    "disjoint": {
+      "mIoU": 53.07457381045001,
+      "mAcc": 69.96991709289183,
+      "allAcc": 87.54535718467682,
+      "per_class_IoU": {
+        "Ground": 25.623880651290488,
+        "Vegetation": 92.99707362822336,
+        "Building": 88.70407881616121,
+        "Road": 83.74560879795465,
+        "Wire": 74.58639976734233,
+        "Pole and Tower": 43.10942171739624,
+        "Wire-Structure Connector": 34.68652063259101,
+        "Vehicle": 75.52800258009846,
+        "Board": 31.312340582870906,
+        "Fencing": 22.985734555581068,
+        "Human and Animal": 30.14387931913159,
+        "Road Side Object": 33.4719446767587
+      }
+    },
+    "overlapping": {
+      "mIoU": 50.62974430974797,
+      "mAcc": 65.01428118100837,
+      "allAcc": 89.39709115695368,
+      "per_class_IoU": {
+        "Ground": 19.578964525402252,
+        "Vegetation": 92.13421134047064,
+        "Building": 89.93686028938686,
+        "Road": 86.8973439741836,
+        "Wire": 68.71296437886937,
+        "Pole and Tower": 39.10004458696936,
+        "Wire-Structure Connector": 21.461570850836736,
+        "Vehicle": 74.68278244485998,
+        "Board": 36.87234233987537,
+        "Fencing": 3.0424787286744546,
+        "Human and Animal": 39.969540942527395,
+        "Road Side Object": 35.167827314919705
+      }
+    },
+    "full": {
+      "mIoU": 52.41170340666691,
+      "mAcc": 68.00622718049941,
+      "allAcc": 88.7020956625201,
+      "per_class_IoU": {
+        "Ground": 22.538775883800533,
+        "Vegetation": 92.7978364707507,
+        "Building": 89.53936259977844,
+        "Road": 85.584968347981,
+        "Wire": 70.77900391253398,
+        "Pole and Tower": 40.82817560535605,
+        "Wire-Structure Connector": 29.744430059492228,
+        "Vehicle": 75.11287344556403,
+        "Board": 35.687373486143194,
+        "Fencing": 15.168041094112859,
+        "Human and Animal": 36.71613929373597,
+        "Road Side Object": 34.44346068075395
+      }
+    },
+    "n_missing_pred": 3,
+    "missing_pred": [
+      "S2_0001_bhopal7",
+      "S3_0005_a_bhopal7",
+      "S3_0005_b_bhopal7"
+    ],
+    "n_length_mismatch": 0,
+    "length_mismatch": []
+  },
+  "concerto_ft": {
+    "disjoint": {
+      "mIoU": 66.5887518861231,
+      "mAcc": 78.85173083375358,
+      "allAcc": 91.2389654244111,
+      "per_class_IoU": {
+        "Ground": 27.573845502329796,
+        "Vegetation": 96.84639486502942,
+        "Building": 91.36117783295155,
+        "Road": 85.71461101135334,
+        "Wire": 84.71093076738121,
+        "Pole and Tower": 68.48175537703652,
+        "Wire-Structure Connector": 76.01357426326376,
+        "Vehicle": 90.14061452016115,
+        "Board": 63.26914058934793,
+        "Fencing": 10.750544398741834,
+        "Human and Animal": 59.448601290847414,
+        "Road Side Object": 44.75383221503346
+      }
+    },
+    "overlapping": {
+      "mIoU": 69.20668349687801,
+      "mAcc": 79.17309705319231,
+      "allAcc": 93.39372751855404,
+      "per_class_IoU": {
+        "Ground": 23.678956233753887,
+        "Vegetation": 97.67212827057203,
+        "Building": 93.50176150290335,
+        "Road": 88.63058778208833,
+        "Wire": 84.57770047097483,
+        "Pole and Tower": 67.95885031678986,
+        "Wire-Structure Connector": 88.13826132076795,
+        "Vehicle": 94.2199731288768,
+        "Board": 67.4878832559649,
+        "Fencing": 1.050188069556999,
+        "Human and Animal": 66.5937295325704,
+        "Road Side Object": 56.97018207771678
+      }
+    },
+    "full": {
+      "mIoU": 68.10113176944822,
+      "mAcc": 78.78101697407226,
+      "allAcc": 92.58499906758531,
+      "per_class_IoU": {
+        "Ground": 25.419741132552755,
+        "Vegetation": 97.03248925334303,
+        "Building": 92.80792756276811,
+        "Road": 87.40237476647206,
+        "Wire": 84.62520290286727,
+        "Pole and Tower": 68.19778904852845,
+        "Wire-Structure Connector": 80.54319267150937,
+        "Vehicle": 92.0437129756476,
+        "Board": 66.56451120713587,
+        "Fencing": 6.56877940540853,
+        "Human and Animal": 64.29819202734727,
+        "Road Side Object": 51.70966827979838
+      }
+    },
+    "n_missing_pred": 3,
+    "missing_pred": [
+      "S2_0001_bhopal7",
+      "S3_0005_a_bhopal7",
+      "S3_0005_b_bhopal7"
+    ],
+    "n_length_mismatch": 0,
+    "length_mismatch": []
+  },
+  "utonia_lp_4ch": {
+    "disjoint": {
+      "mIoU": 62.121841580144654,
+      "mAcc": 76.16261634450302,
+      "allAcc": 89.91024637030287,
+      "per_class_IoU": {
+        "Ground": 26.607971113694102,
+        "Vegetation": 96.60670384096044,
+        "Building": 90.32269810306872,
+        "Road": 84.97428599165471,
+        "Wire": 81.26477500444342,
+        "Pole and Tower": 58.328245916266475,
+        "Wire-Structure Connector": 61.7246262170529,
+        "Vehicle": 85.98386506431375,
+        "Board": 42.677968010813245,
+        "Fencing": 35.60716204510817,
+        "Human and Animal": 40.87843295235398,
+        "Road Side Object": 40.485364702005946
+      }
+    },
+    "overlapping": {
+      "mIoU": 62.75815339793742,
+      "mAcc": 77.42943781678142,
+      "allAcc": 91.49835047374073,
+      "per_class_IoU": {
+        "Ground": 23.310261966323917,
+        "Vegetation": 96.34189609219524,
+        "Building": 92.06636925767255,
+        "Road": 86.50749235883703,
+        "Wire": 81.56324131885935,
+        "Pole and Tower": 59.48586596300195,
+        "Wire-Structure Connector": 65.46461001930163,
+        "Vehicle": 86.95119045771513,
+        "Board": 59.25819448266232,
+        "Fencing": 4.4763968738771105,
+        "Human and Animal": 48.941380079127256,
+        "Road Side Object": 48.73094190567557
+      }
+    },
+    "full": {
+      "mIoU": 63.15673556936261,
+      "mAcc": 77.09752519339203,
+      "allAcc": 90.90230092607072,
+      "per_class_IoU": {
+        "Ground": 24.696610923784952,
+        "Vegetation": 96.54648619547982,
+        "Building": 91.49999751568404,
+        "Road": 85.85797782789619,
+        "Wire": 81.45511054872,
+        "Pole and Tower": 58.96298314086591,
+        "Wire-Structure Connector": 63.280527322519674,
+        "Vehicle": 86.44694096416468,
+        "Board": 55.51398838196439,
+        "Fencing": 21.95412926490848,
+        "Human and Animal": 46.349685091107226,
+        "Road Side Object": 45.316389655255904
+      }
+    },
+    "n_missing_pred": 3,
+    "missing_pred": [
+      "S2_0001_bhopal7",
+      "S3_0005_a_bhopal7",
+      "S3_0005_b_bhopal7"
+    ],
+    "n_length_mismatch": 0,
+    "length_mismatch": []
+  },
+  "concerto_lp_indoor": {
+    "disjoint": {
+      "mIoU": 52.23211747172276,
+      "mAcc": 75.35886332667144,
+      "allAcc": 85.93795892946244,
+      "per_class_IoU": {
+        "Ground": 24.35757161505175,
+        "Vegetation": 91.81807719586507,
+        "Building": 86.99620421690084,
+        "Road": 84.13011668016797,
+        "Wire": 72.22375845079337,
+        "Pole and Tower": 45.826818041852384,
+        "Wire-Structure Connector": 42.07936224848587,
+        "Vehicle": 68.59848493212391,
+        "Board": 19.080560063370143,
+        "Fencing": 33.46419969072977,
+        "Human and Animal": 28.300390063641963,
+        "Road Side Object": 29.909866461690143
+      }
+    },
+    "overlapping": {
+      "mIoU": 53.13450400234289,
+      "mAcc": 74.06638888343414,
+      "allAcc": 88.0356380782393,
+      "per_class_IoU": {
+        "Ground": 19.03894466197584,
+        "Vegetation": 83.88677497068802,
+        "Building": 88.47803819582148,
+        "Road": 85.84058889442309,
+        "Wire": 69.65552705910743,
+        "Pole and Tower": 46.264298229369956,
+        "Wire-Structure Connector": 44.05225567269153,
+        "Vehicle": 75.57632475377983,
+        "Board": 32.6196006684424,
+        "Fencing": 16.206272970875492,
+        "Human and Animal": 36.35661651793237,
+        "Road Side Object": 39.63880543300708
+      }
+    },
+    "full": {
+      "mIoU": 53.434349986298116,
+      "mAcc": 74.9851485941043,
+      "allAcc": 87.24833408155632,
+      "per_class_IoU": {
+        "Ground": 21.395593340140508,
+        "Vegetation": 89.84719440860556,
+        "Building": 87.9981803268024,
+        "Road": 85.12283748017495,
+        "Wire": 70.58962558546796,
+        "Pole and Tower": 46.05846176377138,
+        "Wire-Structure Connector": 42.86752912945126,
+        "Vehicle": 71.8775004817165,
+        "Board": 28.403385965869305,
+        "Fencing": 27.224926482071155,
+        "Human and Animal": 33.87880468604773,
+        "Road Side Object": 35.9481601854586
+      }
+    },
+    "n_missing_pred": 3,
+    "missing_pred": [
+      "S2_0001_bhopal7",
+      "S3_0005_a_bhopal7",
+      "S3_0005_b_bhopal7"
+    ],
+    "n_length_mismatch": 0,
+    "length_mismatch": []
+  }
+}

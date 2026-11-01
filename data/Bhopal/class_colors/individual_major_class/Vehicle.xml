@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CloudCompare>
+    <ColorScale version="1">
+        <Properties>
+            <name>Vehicle</name>
+            <uuid>{d1c1e1a0-01a0-4d87-9340-100010}</uuid>
+            <absolute>1</absolute>
+            <minValue>1</minValue>
+            <range>1</range>
+        </Properties>
+        <Data>
+            <step r="30" g="144" b="255" pos="0.0"/>
+            <step r="30" g="144" b="255" pos="1.0"/>
+        </Data>
+    </ColorScale>
+</CloudCompare>
+
