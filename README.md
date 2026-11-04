@@ -17,7 +17,7 @@ If this code or the dataset helps your work, please ⭐ star the repository and 
 | 📥 Getting the data | [`data/DOWNLOAD.md`](data/DOWNLOAD.md): account, India vs international release, every download command, which file is for what |
 | 🗂️ Data layout and label spaces | [`data/Bhopal/README.md`](data/Bhopal/README.md), comparison datasets in [`data/README.md`](data/README.md) |
 | 📊 Every reported number with its config | [`RESULTS.md`](RESULTS.md) |
-| 💾 Trained weights | [`MODEL_ZOO.md`](MODEL_ZOO.md): the paper's runs; download links follow, every row is reproducible from its config meanwhile |
+| 💾 Trained weights | [`MODEL_ZOO.md`](MODEL_ZOO.md): the paper's runs; the fine-tuned Utonia(L), Concerto(L) and Sonata(L) models on 🤗 Hugging Face ([`geoai4cities/BhopalMLS-Utonia`](https://huggingface.co/geoai4cities/BhopalMLS-Utonia), [`-Concerto`](https://huggingface.co/geoai4cities/BhopalMLS-Concerto), [`-Sonata`](https://huggingface.co/geoai4cities/BhopalMLS-Sonata)), fetched with `scripts/download_weights.py` |
 | 📐 Benchmark protocol (splits, taxonomies, metrics, recipes) | [`docs/BENCHMARK_PROTOCOL.md`](docs/BENCHMARK_PROTOCOL.md) |
 | 🧪 Step-by-step reproduction | [`docs/REPRODUCING.md`](docs/REPRODUCING.md) |
 | ⚙️ Environment | [`docs/ENVIRONMENT.md`](docs/ENVIRONMENT.md) |
@@ -42,6 +42,9 @@ python data/Bhopal/tools/bhopal_h5_dataset.py data/Bhopal/bhopal_scene_v9_normal
 PTv3/Bhopal/scripts/train_bhopal.sh train 9ch       # supervised baseline, 12 classes
 Utonia/Bhopal/scripts/train_bhopal.sh ft 9ch        # Utonia(L) fine-tuning, the paper's 71.28 mIoU row
 Utonia/Bhopal/scripts/test_bhopal.sh  ft 9ch        # test split, precise evaluation with test-time augmentation
+
+# or evaluate the released fine-tuned weights without training (Utonia(L), Concerto(L), Sonata(L); MODEL_ZOO.md)
+python scripts/download_weights.py utonia_bhopal_finetune_9ch && Utonia/Bhopal/scripts/test_bhopal.sh ft 9ch
 ```
 
 ## 🗂️ Repository layout

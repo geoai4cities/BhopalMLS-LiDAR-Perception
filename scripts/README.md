@@ -8,6 +8,7 @@
 | `<Model>/Bhopal/scripts/test_bhopal.sh <protocol> [...] [--weight PATH]` | evaluate a run on the test split with the paper's test-time augmentation |
 | `<Model>/<Dataset>/scripts/train.sh [protocol] [4ch|9ch] [outdoor|indoor]` and `test.sh` | fine-tune on Ke-MLS, Toronto-3D, Paris-Lille-3D or SemanticKITTI in the unified 12-class taxonomy (no protocol = `ft 9ch`, the cross-region source model; `Kerala/` has the full protocol set, the other three FT-9ch only) |
 | `<Model>/cross_data_testing/run_cross_test.sh <source>_on_<target> --weight PATH` | evaluate a model trained on one dataset on another |
+| `python scripts/download_weights.py <run> [...]` (`--list`, `--all MODEL`) | download the released fine-tuned Utonia(L), Concerto(L) and Sonata(L) weights from Hugging Face into `<Model>/<Dataset>/outputs/<run>/model/model_best.pth`, where `test_bhopal.sh` and `test.sh` look |
 
 Protocols: supervised models `train`, `insseg`; foundation models `lp`, `dp`, `lora`, `ft`, `insseg_lp`, `insseg_dp`, `insseg_ft`. Everything the launcher does is printed first; `--dry-run` shows the exact `tools/train.py` or `tools/test.py` command for a manual launch. Any `key=value` argument is forwarded to Pointcept's `--options`.
 

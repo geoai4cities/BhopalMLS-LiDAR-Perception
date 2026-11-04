@@ -1,6 +1,6 @@
 # Model zoo
 
-Trained weights of the paper's runs. Each row is the `model_best.pth` the paper's number was produced from (selected on the validation split, evaluated once on the test split). Download links will appear here when the weights are hosted; until then the configs reproduce every row from the released data (`docs/REPRODUCING.md`).
+Trained weights of the paper's runs. Each row is the `model_best.pth` the paper's number was produced from (selected on the validation split, evaluated once on the test split). The 12-class fine-tuned models ([Sonata(L)](https://huggingface.co/geoai4cities/BhopalMLS-Sonata), [Concerto(L)](https://huggingface.co/geoai4cities/BhopalMLS-Concerto), [Utonia(L)](https://huggingface.co/geoai4cities/BhopalMLS-Utonia)) are on Hugging Face as `model.safetensors` (model weights only; the size column is that file); `python scripts/download_weights.py <run>` writes one where the test launcher reads it, e.g. `python scripts/download_weights.py utonia_bhopal_finetune_9ch && Utonia/Bhopal/scripts/test_bhopal.sh ft 9ch`. The other rows are reproducible from their configs and the released data (`docs/REPRODUCING.md`).
 
 Weights derived from Sonata, Concerto and Utonia inherit the CC BY-NC 4.0 terms of those checkpoints; the from-scratch PTv3, LitePT-L and KPConvX-L weights follow this repository's licence.
 
@@ -24,7 +24,7 @@ Run names are the output folders the launcher creates under `<Model>/Bhopal/outp
 | `sonata_bhopal_linear_probe_4ch_21c` | Sonata(L) | `Sonata/Bhopal/configs/bhopal/sonata_140gb_21class_linear_probe_4ch.py` | 0.43 GB | to be added |
 | `sonata_bhopal_linear_probe_9ch_21c` | Sonata(L) | `Sonata/Bhopal/configs/bhopal/sonata_140gb_21class_linear_probe_9ch.py` | 0.43 GB | to be added |
 | `sonata_bhopal_decoder_probe_9ch_21c` | Sonata(L) | `Sonata/Bhopal/configs/bhopal/sonata_140gb_21class_decoder_probe_9ch.py` | 0.63 GB | to be added |
-| `sonata_bhopal_finetune_9ch` | Sonata(L) | `Sonata/Bhopal/configs/bhopal/sonata_140gb_12class_finetune_9ch.py` | 1.50 GB | to be added |
+| `sonata_bhopal_finetune_9ch` | Sonata(L) | `Sonata/Bhopal/configs/bhopal/sonata_140gb_12class_finetune_9ch.py` | 0.50 GB | [🤗 BhopalMLS-Sonata](https://huggingface.co/geoai4cities/BhopalMLS-Sonata/tree/main/Bhopal/sonata_bhopal_finetune_9ch) |
 | `sonata_bhopal_finetune_9ch_21c` | Sonata(L) | `Sonata/Bhopal/configs/bhopal/sonata_140gb_21class_finetune_9ch.py` | 1.50 GB | to be added |
 | `sonata_bhopal_lora_9ch_21c` | Sonata(L) | `Sonata/Bhopal/configs/bhopal/sonata_140gb_21class_lora_9ch.py` | 0.44 GB | to be added |
 | `sonata_bhopal_insseg_lp_9ch` | Sonata(L) | `Sonata/Bhopal/configs/bhopal/sonata_140gb_12class_insseg_lp_9ch.py` | 0.45 GB | to be added |
@@ -43,7 +43,7 @@ Run names are the output folders the launcher creates under `<Model>/Bhopal/outp
 | `concerto_bhopal_decoder_probe_9ch_21c` | Concerto(O) | `Concerto/Bhopal/configs/bhopal/concerto_140gb_21class_decoder_probe_9ch.py` | 1.03 GB | to be added |
 | `concerto_bhopal_decoder_probe_9ch_21c_indoor` | Concerto(L) | `Concerto/Bhopal/configs/bhopal/concerto_140gb_21class_decoder_probe_9ch.py (indoor)` | 1.03 GB | to be added |
 | `concerto_bhopal_finetune_9ch` | Concerto(O) | `Concerto/Bhopal/configs/bhopal/concerto_140gb_12class_finetune_9ch.py` | 2.69 GB | to be added |
-| `concerto_bhopal_finetune_9ch_indoor` | Concerto(L) | `Concerto/Bhopal/configs/bhopal/concerto_140gb_12class_finetune_9ch.py (indoor)` | 2.69 GB | to be added |
+| `concerto_bhopal_finetune_9ch_indoor` | Concerto(L) | `Concerto/Bhopal/configs/bhopal/concerto_140gb_12class_finetune_9ch.py (indoor)` | 0.90 GB | [🤗 BhopalMLS-Concerto](https://huggingface.co/geoai4cities/BhopalMLS-Concerto/tree/main/Bhopal/concerto_bhopal_finetune_9ch_indoor) |
 | `concerto_bhopal_finetune_9ch_21c` | Concerto(O) | `Concerto/Bhopal/configs/bhopal/concerto_140gb_21class_finetune_9ch.py` | 2.69 GB | to be added |
 | `concerto_bhopal_finetune_9ch_21c_indoor` | Concerto(L) | `Concerto/Bhopal/configs/bhopal/concerto_140gb_21class_finetune_9ch.py (indoor)` | 2.69 GB | to be added |
 | `concerto_bhopal_lora_9ch_21c` | Concerto(O) | `Concerto/Bhopal/configs/bhopal/concerto_140gb_21class_lora_9ch.py` | 0.84 GB | to be added |
@@ -66,7 +66,7 @@ Run names are the output folders the launcher creates under `<Model>/Bhopal/outp
 | `utonia_bhopal_linear_probe_9ch_21c` | Utonia(L) | `Utonia/Bhopal/configs/bhopal/utonia_140gb_21class_linear_probe_9ch.py` | 0.55 GB | to be added |
 | `utonia_bhopal_decoder_probe_9ch` | Utonia(L) | `Utonia/Bhopal/configs/bhopal/utonia_140gb_12class_decoder_probe_9ch.py` | 0.85 GB | to be added |
 | `utonia_bhopal_decoder_probe_9ch_21c` | Utonia(L) | `Utonia/Bhopal/configs/bhopal/utonia_140gb_21class_decoder_probe_9ch.py` | 0.85 GB | to be added |
-| `utonia_bhopal_finetune_9ch` | Utonia(L) | `Utonia/Bhopal/configs/bhopal/utonia_140gb_12class_finetune_9ch.py` | 1.95 GB | to be added |
+| `utonia_bhopal_finetune_9ch` | Utonia(L) | `Utonia/Bhopal/configs/bhopal/utonia_140gb_12class_finetune_9ch.py` | 0.65 GB | [🤗 BhopalMLS-Utonia](https://huggingface.co/geoai4cities/BhopalMLS-Utonia/tree/main/Bhopal/utonia_bhopal_finetune_9ch) |
 | `utonia_bhopal_finetune_9ch_21c` | Utonia(L) | `Utonia/Bhopal/configs/bhopal/utonia_140gb_21class_finetune_9ch.py` | 1.95 GB | to be added |
 | `utonia_bhopal_lora_9ch` | Utonia(L) | `Utonia/Bhopal/configs/bhopal/utonia_140gb_12class_lora_9ch.py` | 0.55 GB | to be added |
 | `utonia_bhopal_lora_9ch_21c` | Utonia(L) | `Utonia/Bhopal/configs/bhopal/utonia_140gb_21class_lora_9ch.py` | 0.55 GB | to be added |
@@ -84,7 +84,6 @@ Run names are the output folders the launcher creates under `<Model>/Bhopal/outp
 | `utonia_bhopal_finetune_9ch_21c_v10` | Utonia(L)† | `Utonia/Bhopal/configs/bhopal_v10/utonia_140gb_21class_finetune_9ch.py` | 1.95 GB | to be added |
 | `concerto_bhopal_linear_probe_9ch_v10` | Concerto(O)† | `Concerto/Bhopal/configs/bhopal_v10/concerto_140gb_12class_linear_probe_9ch.py` | 0.83 GB | to be added |
 | `concerto_bhopal_linear_probe_9ch_21c_v10` | Concerto(O)† | `Concerto/Bhopal/configs/bhopal_v10/concerto_140gb_21class_linear_probe_9ch.py` | 0.83 GB | to be added |
-| `concerto_bhopal_decoder_probe_9ch_v10` | Concerto(O)† | `Concerto/Bhopal/configs/bhopal_v10/concerto_140gb_12class_decoder_probe_9ch.py` | 1.03 GB | to be added |
 | `concerto_bhopal_decoder_probe_9ch_21c_v10` | Concerto(O)† | `Concerto/Bhopal/configs/bhopal_v10/concerto_140gb_21class_decoder_probe_9ch.py` | 1.03 GB | to be added |
 | `concerto_bhopal_finetune_9ch_v10` | Concerto(O)† | `Concerto/Bhopal/configs/bhopal_v10/concerto_140gb_12class_finetune_9ch.py` | 2.69 GB | to be added |
 | `concerto_bhopal_finetune_9ch_21c_v10` | Concerto(O)† | `Concerto/Bhopal/configs/bhopal_v10/concerto_140gb_21class_finetune_9ch.py` | 2.69 GB | to be added |
@@ -119,3 +118,4 @@ Rows of the paper whose weight file is not retained on the authors' disk (the re
 - `concerto_bhopal_decoder_probe_9ch_indoor` (Concerto(L)): `Concerto/Bhopal/configs/bhopal/concerto_140gb_12class_decoder_probe_9ch.py (indoor)`
 - `concerto_bhopal_lora_9ch` (Concerto(O)): `Concerto/Bhopal/configs/bhopal/concerto_140gb_12class_lora_9ch.py`
 - `concerto_bhopal_lora_9ch_indoor` (Concerto(L)): `Concerto/Bhopal/configs/bhopal/concerto_140gb_12class_lora_9ch.py (indoor)`
+- `concerto_bhopal_decoder_probe_9ch_v10` (Concerto(O)†): `Concerto/Bhopal/configs/bhopal_v10/concerto_140gb_12class_decoder_probe_9ch.py`
